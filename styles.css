@@ -1,0 +1,554 @@
+/* ============================================
+   FORESTRY & GIS PORTFOLIO - CUSTOM THEME CSS
+   ============================================ */
+
+/* COLOR PALETTE - Forestry & GIS Inspired */
+:root {
+      /* Primary Colors - Earth & Forest Tones */
+    --primary-green: #2d5016;        /* Deep forest green */
+    --secondary-green: #3d7f2f;      /* Medium forest green */
+    --accent-green: #5a9f3f;         /* Lighter green accent */
+    --light-green: #a8d08d;          /* Soft green highlight */
+
+    /* Earth Tones */
+    --forest-brown: #6b4423;         /* Deep brown (bark) */
+    --light-brown: #8b6239;          /* Medium brown */
+    --clay-tone: #a0824d;            /* Clay/earth tone */
+
+    /* Water/Sky (GIS elements) */
+    --water-blue: #4a90b8;           /* Topographic water */
+    --sky-blue: #87ceeb;             /* Light sky blue */
+
+    /* Neutrals */
+    --dark-text: #1a1a1a;            /* Near black for text */
+    --light-bg: #f5f5f0;             /* Off-white background */
+    --white: #ffffff;
+      --border-color: #d4c5b9;         /* Warm border */
+
+    /* Spacing */
+    --spacing-unit: 1rem;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 15px rgba(45, 80, 22, 0.1);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background-color: var(--light-bg);
+      min-height: 100vh;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+header {
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+      color: var(--white);
+      padding: 4rem var(--spacing-unit) 3rem;
+      text-align: center;
+      border-bottom: 4px solid var(--accent-green);
+      box-shadow: var(--box-shadow);
+}
+
+header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      letter-spacing: 1px;
+}
+
+header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+}
+
+nav {
+      background-color: var(--secondary-green);
+      padding: 1.2rem var(--spacing-unit);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+}
+
+nav a {
+      display: inline-block;
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+}
+
+nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: var(--light-green);
+      transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+      width: 100%;
+}
+
+nav a:hover {
+      color: var(--light-green);
+      transform: translateY(-2px);
+}
+
+/* ============================================
+   CONTAINER & LAYOUT
+   ============================================ */
+
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-unit);
+}
+
+main {
+      padding: 4rem var(--spacing-unit);
+}
+
+section {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--box-shadow);
+      border-left: 5px solid var(--accent-green);
+}
+
+section h2 {
+      color: var(--primary-green);
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      position: relative;
+      padding-bottom: 1rem;
+}
+
+section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--secondary-green), var(--accent-green));
+      border-radius: 2px;
+}
+
+section p {
+      line-height: 1.8;
+      color: var(--dark-text);
+      margin-bottom: 1rem;
+}
+
+/* ============================================
+   RESUME SECTION
+   ============================================ */
+
+.resume-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+}
+
+.experience-item,
+.education-item {
+      padding: 1.5rem;
+      background-color: var(--light-bg);
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--water-blue);
+      transition: all 0.3s ease;
+}
+
+.experience-item:hover,
+.education-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(45, 80, 22, 0.15);
+}
+
+.experience-item h3,
+.education-item h3 {
+      color: var(--secondary-green);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+}
+
+.experience-item .position,
+.education-item .degree {
+      font-weight: 700;
+      color: var(--primary-green);
+}
+
+.experience-item .company,
+.education-item .institution {
+      color: var(--forest-brown);
+      font-style: italic;
+      font-size: 0.95rem;
+}
+
+.date {
+      color: var(--clay-tone);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+}
+
+/* ============================================
+   GIS PROJECTS SECTION
+   ============================================ */
+
+.gis-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+}
+
+.gis-project-card {
+      background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
+      border: 2px solid var(--accent-green);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+}
+
+.gis-project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-green), var(--water-blue), var(--accent-green));
+}
+
+.gis-project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(45, 80, 22, 0.2);
+      border-color: var(--secondary-green);
+}
+
+.gis-project-card h3 {
+      color: var(--primary-green);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+}
+
+.gis-project-card p {
+      color: var(--dark-text);
+      margin-bottom: 1rem;
+}
+
+.project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+}
+
+.tech-badge {
+      display: inline-block;
+      background-color: var(--accent-green);
+      color: var(--white);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+}
+
+.gis-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--water-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+}
+
+.gis-link:hover {
+      color: var(--primary-green);
+      border-bottom-color: var(--primary-green);
+}
+
+/* ============================================
+   DEVELOPMENT TOOLS & PRODUCTS SECTION
+   ============================================ */
+
+.tools-products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+}
+
+.tool-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 1.8rem;
+      transition: all 0.3s ease;
+      text-align: center;
+}
+
+.tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+}
+
+.tool-card h3 {
+      color: var(--secondary-green);
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+}
+
+.tool-card p {
+      color: var(--dark-text);
+      font-size: 0.95rem;
+      line-height: 1.6;
+}
+
+.tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(93, 160, 63, 0.15);
+      border-color: var(--accent-green);
+}
+
+.tool-type {
+      display: inline-block;
+      background-color: var(--light-green);
+      color: var(--primary-green);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 1rem;
+}
+
+/* ============================================
+   SKILLS & EXPERTISE SECTION
+   ============================================ */
+
+.skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+}
+
+.skill-category {
+      background-color: var(--light-bg);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      border-top: 4px solid var(--water-blue);
+}
+
+.skill-category h3 {
+      color: var(--secondary-green);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+}
+
+.skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+}
+
+.skill-tag {
+      background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%);
+      color: var(--white);
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+}
+
+.skill-tag:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(93, 160, 63, 0.3);
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+}
+
+.contact-link {
+      display: inline-block;
+      color: var(--primary-green);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid transparent;
+      border-radius: 5px;
+}
+
+.contact-link:hover {
+      color: var(--white);
+      background-color: var(--secondary-green);
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+      background-color: var(--primary-green);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem var(--spacing-unit);
+      border-top: 4px solid var(--accent-green);
+      margin-top: 4rem;
+}
+
+footer p {
+      color: var(--light-green);
+      margin-bottom: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+      header h1 {
+                font-size: 2.5rem;
+      }
+
+    header p {
+              font-size: 1.1rem;
+    }
+
+    nav a {
+              display: block;
+              margin: 0.8rem 0;
+    }
+
+    nav a::after {
+              height: 2px;
+    }
+
+    section {
+              padding: 1.5rem;
+    }
+
+    section h2 {
+              font-size: 1.8rem;
+    }
+
+    .resume-section {
+              grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+              grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+              gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+      header {
+                padding: 2rem 1rem;
+      }
+
+    header h1 {
+              font-size: 1.8rem;
+    }
+
+    nav a {
+              margin: 0.5rem 0.5rem;
+              font-size: 0.95rem;
+    }
+
+    main {
+              padding: 1.5rem 0.5rem;
+    }
+
+    section {
+              padding: 1rem;
+              margin-bottom: 1.5rem;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.highlight {
+      color: var(--accent-green);
+      font-weight: 600;
+}
+
+.badge-new {
+      display: inline-block;
+      background-color: var(--water-blue);
+      color: var(--white);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+}
+
+.button-primary {
+      display: inline-block;
+      background-color: var(--secondary-green);
+      color: var(--white);
+      padding: 0.8rem 2rem;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid var(--secondary-green);
+}
+
+.button-primary:hover {
+      background-color: var(--primary-green);
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(45, 80, 22, 0.2);
+}
