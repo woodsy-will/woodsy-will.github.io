@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>William Steinley - Portfolio</title>
+      <style>
+                * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                }
+
+                body {
+                              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                              line-height: 1.6;
+                              color: #333;
+                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              min-height: 100vh;
+                }
+
+                .container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 0 20px;
+                }
+
+                header {
+                              background: rgba(255, 255, 255, 0.1);
+                              backdrop-filter: blur(10px);
+                              color: white;
+                              padding: 2rem 0;
+                              text-align: center;
+                              border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                }
+
+                header h1 {
+                              font-size: 2.5rem;
+                              margin-bottom: 0.5rem;
+                }
+
+                header p {
+                              font-size: 1.1rem;
+                              opacity: 0.9;
+                }
+
+                nav {
+                              background: rgba(255, 255, 255, 0.05);
+                              padding: 1rem 0;
+                              text-align: center;
+                }
+
+                nav a {
+                              color: white;
+                              text-decoration: none;
+                              margin: 0 1.5rem;
+                              font-weight: 500;
+                              transition: opacity 0.3s;
+                }
+
+                nav a:hover {
+                              opacity: 0.7;
+                }
+
+                main {
+                              padding: 3rem 0;
+                }
+
+                section {
+                              background: white;
+                              border-radius: 10px;
+                              padding: 2rem;
+                              margin-bottom: 2rem;
+                              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                }
+
+                h2 {
+                              color: #667eea;
+                              margin-bottom: 1rem;
+                              font-size: 2rem;
+                }
+
+                .about p {
+                              font-size: 1.1rem;
+                              line-height: 1.8;
+                }
+
+                .projects {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                              gap: 2rem;
+                }
+
+                .project-card {
+                              border: 2px solid #667eea;
+                              border-radius: 8px;
+                              padding: 1.5rem;
+                              transition: transform 0.3s, box-shadow 0.3s;
+                }
+
+                .project-card:hover {
+                              transform: translateY(-5px);
+                              box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+                }
+
+                .project-card h3 {
+                              color: #667eea;
+                              margin-bottom: 0.5rem;
+                }
+
+                .skills {
+                              display: flex;
+                              flex-wrap: wrap;
+                              gap: 1rem;
+                }
+
+                .skill-tag {
+                              background: #667eea;
+                              color: white;
+                              padding: 0.5rem 1rem;
+                              border-radius: 20px;
+                              font-size: 0.9rem;
+                }
+
+                footer {
+                              text-align: center;
+                              color: white;
+                              padding: 2rem 0;
+                              border-top: 1px solid rgba(255, 255, 255, 0.2);
+                              margin-top: 3rem;
+                }
+
+                footer a {
+                              color: white;
+                              text-decoration: none;
+                              margin: 0 1rem;
+                }
+
+                footer a:hover {
+                              text-decoration: underline;
+                }
+            </style>
+  </head>
+  <body>
+        <header>
+                  <div class="container">
+                                <h1>William Steinley</h1>
+                              <p>Full Stack Developer | GIS Specialist | Tech Enthusiast</p>
+                  </div>div>
+        </header>
+      
+      <nav>
+                <div class="container">
+                              <a href="#about">About</a>a>
+                              <a href="#projects">Projects</a>a>
+                              <a href="#skills">Skills</a>a>
+                              <a href="#contact">Contact</a>a>
+                </div>div>
+      </nav>
+
+        <main>
+                  <div class="container">
+                                <section id="about" class="about">
+                                                  <h2>About Me</h2>
+                                                  <p>Welcome to my portfolio! I'm a passionate developer with expertise in full-stack development, geospatial information systems (GIS), and modern web technologies. I love working with cutting-edge tools and creating elegant solutions to complex problems.</p>
+                                                <p style="margin-top: 1rem;">Currently working on innovative projects that combine technology with practical applications. Always eager to learn new technologies and collaborate with other developers.</p>
+                                </section>section>
+                              
+                              <section id="projects">
+                                              <h2>Featured Projects</h2>
+                                              <div class="projects">
+                                                                  <div class="project-card">
+                                                                                          <h3>Forestry Knowledge Web Scraper</h3>
+                                                                                          <p>A Python-based web scraper designed to gather forestry data and information from multiple sources. Built with scalability and efficiency in mind.</p>
+                                                                                          <p style="margin-top: 0.5rem;"><strong>Tech:</strong> Python, Web Scraping</p>
+                                                                  </div>div>
+                                                                  <div class="project-card">
+                                                                                          <h3>PICNIC-PURSUIT</h3>
+                                                                                          <p>An interactive application combining location-based services with recreational data. Perfect for finding and planning outdoor activities.</p>
+                                                                                          <p style="margin-top: 0.5rem;"><strong>Tech:</strong> Python, GIS</p>
+                                                                  </div>div>
+                                                                  <div class="project-card">
+                                                                                          <h3>PostgreSQL-GIS Server Home Lab</h3>
+                                                                                          <p>A comprehensive home laboratory setup featuring PostgreSQL with GIS extensions. Designed for testing and development of spatial database applications.</p>
+                                                                                          <p style="margin-top: 0.5rem;"><strong>Tech:</strong>strong> PostgreSQL, PostGIS</p>
+                                                                  </div>div>
+                                              </div>div>
+                              </section>section>
+                              
+                              <section id="skills">
+                                              <h2>Skills</h2>
+                                              <div class="skills">
+                                                                  <span class="skill-tag">Python</span>span>
+                                                                  <span class="skill-tag">JavaScript</span>span>
+                                                                  <span class="skill-tag">PostgreSQL</span>span>
+                                                                  <span class="skill-tag">GIS</span>span>
+                                                                  <span class="skill-tag">Web Development</span>span>
+                                                                  <span class="skill-tag">Git</span>span>
+                                                                  <span class="skill-tag">API Development</span>span>
+                                                                  <span class="skill-tag">Database Design</span>span>
+                                              </div>div>
+                              </section>section>
+                              
+                              <section id="contact">
+                                              <h2>Get In Touch</h2>
+                                              <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                                              <footer style="border-top: none; margin-top: 1.5rem; padding: 0;">
+                                                                  <a href="https://github.com/woodsy-will">GitHub</a>a>
+                                                                  <a href="mailto:your.email@example.com">Email</a>a>
+                                                                  <a href="https://linkedin.com">LinkedIn</a>a>
+                                              </footer>footer>
+                              </section>section>
+                  </div>div>
+        </main>
+      
+      <footer>
+                <div class="container">
+                              <p>&copy; 2026 William Steinley. All rights reserved.</p>p>
+                </div>div>
+      </footer>
+  </body>
+</html>html>
+      </footer></p></p></strong></strong></p></p>
+        </main>
+      </nav></p></h1>
+        </header>
+  </body>
+      </style></title>
+  </head>
