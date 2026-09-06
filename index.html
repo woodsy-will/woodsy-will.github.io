@@ -133,6 +133,33 @@
             </div>
           </div>
 
+          <div class="featured-project">
+            <a href="projects/lidar-canopy/sheet1_chm.jpg" target="_blank" class="featured-image">
+              <img src="projects/lidar-canopy/thumb_chm.jpg" alt="LiDAR canopy height model of the plan area with a tree-top detail inset" loading="lazy">
+            </a>
+            <div class="featured-body">
+              <h3>LiDAR Canopy Height &amp; Stand Structure &mdash; North Fork Deer Creek</h3>
+              <p>116 million points of USGS 3DEP LiDAR (2022, QL1) over the same section, processed with a streaming PDAL pipeline into a 3 ft canopy height model, then into tree tops (variable-window local maxima with modelled crowns), canopy cover, dominant height, tree-top density and rumple grids, and per-unit and per-plot structure metrics at the piece 2 cruise plots. Plan area: 93 % canopy cover, 95th-percentile height 128 ft, 22,744 tree tops detected. Everything here is measured from real data.</p>
+              <div class="project-tech">
+                <span class="tech-badge">LiDAR / PDAL</span>
+                <span class="tech-badge">USGS 3DEP</span>
+                <span class="tech-badge">NumPy / SciPy</span>
+                <span class="tech-badge">GDAL</span>
+                <span class="tech-badge">PyQGIS</span>
+              </div>
+              <div class="featured-links">
+                <a href="projects/lidar-canopy/Sheet1_Canopy_Height_Model.pdf" class="gis-link" target="_blank">Sheet 1: Canopy height model (PDF) &rarr;</a>
+                <a href="projects/lidar-canopy/Sheet2_Canopy_Cover_Structure.pdf" class="gis-link" target="_blank">Sheet 2: Cover &amp; structure grids (PDF) &rarr;</a>
+                <a href="https://github.com/woodsy-will/lidar-canopy-height" class="gis-link" target="_blank">Source, GeoTIFFs &amp; metrics on GitHub &rarr;</a>
+              </div>
+              <div class="featured-gallery">
+                <a href="projects/lidar-canopy/inset_crowns.jpg" target="_blank"><img src="projects/lidar-canopy/inset_crowns.jpg" alt="Detail: detected tree tops with modelled crowns over the canopy height model" loading="lazy"></a>
+                <a href="projects/lidar-canopy/sheet2_structure.jpg" target="_blank"><img src="projects/lidar-canopy/sheet2_structure.jpg" alt="Four structure grids: canopy cover, dominant height, tree-top density, rumple" loading="lazy"></a>
+              </div>
+              <p class="featured-note">The LiDAR and every metric are real; the THP plan and units are the illustrative set from the map packet.</p>
+            </div>
+          </div>
+
           <div class="gis-projects-grid">
             <div class="gis-project-card">
               <h3>PostgreSQL-GIS Server Home Lab</h3>
