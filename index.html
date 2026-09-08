@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="William Steinley, forester and GIS analyst in Gold Run, California: timber inventory, LiDAR and terrain analysis, harvest-plan mapping and post-fire remote sensing. Portfolio, resume and open-source project code.">
+    <meta name="theme-color" content="#2f6b3a">
+    <meta property="og:title" content="William Steinley - Forester &amp; GIS Analyst">
+    <meta property="og:description" content="Timber inventory, LiDAR and terrain analysis, harvest-plan mapping and post-fire remote sensing. Portfolio and resume.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://woodsy-will.github.io/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b3a'/%3E%3Cpath d='M32 10 L50 38 H40 L48 50 H36 V56 H28 V50 H16 L24 38 H14 Z' fill='%23eaf3e6'/%3E%3C/svg%3E">
     <title>William Steinley - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
       <div class="container">
+        <p class="eyebrow">Gold Run, California</p>
         <h1>William Steinley</h1>
-        <p>Forester &middot; GIS Analyst &middot; M.S. Forestry | Timber inventory, LiDAR and terrain analysis, ArcGIS and open-source mapping | Gold Run, California</p>
+        <p class="tagline">Forester &middot; GIS Analyst &middot; M.S. Forestry</p>
+        <p class="subtitle">Timber inventory, LiDAR and terrain analysis, ArcGIS and open-source mapping</p>
+        <div class="header-actions">
+          <a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF)</a>
+          <a href="#gis-projects" class="button-secondary">See the projects</a>
+          <a href="mailto:wjsteinley@gmail.com" class="button-secondary">Email</a>
+        </div>
       </div>
     </header>
 
@@ -28,7 +42,7 @@
         <!-- RESUME SECTION -->
         <section id="resume">
           <h2>About</h2>
-          <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R and Python. I deploy ArcGIS Pro, Field Maps and Survey123 for field data collection, automate map production and spatial processing with ArcPy and lidR, and use AI-assisted development tools to build that automation faster. I am lead author of a published fire ecology study.</p>
+          <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester (RPF) exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R and Python. I deploy ArcGIS Pro, Field Maps and Survey123 for field data collection, automate map production and spatial processing with ArcPy and lidR, and use AI-assisted development tools to build that automation faster. I am lead author of a published fire ecology study.</p>
           <p>The four projects below are built on the same section of Nevada County timberland and one nearby fire, using only public data, so anyone can rerun them. Each one states what is measured and what is simulated. They are built in QGIS and PyQGIS, Python (pandas, GDAL, PDAL, GeoPandas), PostGIS and Excel; the same workflows run in ArcGIS Pro and ArcPy, which is where I did them professionally.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF, 2 pages)</a></p>
@@ -52,12 +66,12 @@
                 <div class="position">Forester III</div>
                 <div class="company">Jefferson Resource Company &middot; Placerville, CA</div>
                 <ul class="resume-bullets">
-                  <li>Supervised field crews of up to four across ~8,000 acres of the Plumas National Forest Community Protection Project, overseeing and analyzing 500+ plots and catching layout, marking and survey errors before they reached USFS deliverables; implemented NEPA requirements and silvicultural prescriptions in the field, including unit layout for helicopter yarding.</li>
+                  <li>Supervised field crews of up to four across ~8,000 acres of the Plumas National Forest Community Protection Project, overseeing and analyzing 500+ plots and catching layout, marking and survey errors before they reached U.S. Forest Service (USFS) deliverables; implemented National Environmental Policy Act (NEPA) requirements and silvicultural prescriptions in the field, including unit layout for helicopter yarding.</li>
                   <li>Led the transition from Avenza Maps Pro to ArcGIS Online, ArcGIS Pro, Field Maps and Survey123, authoring two technical guides and the training materials that drove adoption; eliminated manual re-keying of field data.</li>
-                  <li>Automated cartographic production and spatial data processing in Python and ArcPy; generated CHM and DTM products from LiDAR in R (lidR), with slope and terrain derivatives informing yarding system selection and harvest unit delineation.</li>
+                  <li>Automated cartographic production and spatial data processing in Python and ArcPy; generated canopy height and digital terrain models (CHM, DTM) from LiDAR in R (lidR), with slope and terrain derivatives informing yarding system selection and harvest unit delineation.</li>
                   <li>Developed R and lidR routines for individual tree crown delineation and canopy cover estimation as an open-source alternative to licensed processing software.</li>
                   <li>Published and maintained 40+ hosted feature layers and geodatabases and managed offline map areas across three project areas for stream, inventory plot, archaeological and forest health surveys.</li>
-                  <li>Field liaison between JRC, USFS timber staff and National Forest Foundation partners; supported contract administration and BMP compliance under a Registered Professional Forester.</li>
+                  <li>Field liaison between JRC, USFS timber staff and National Forest Foundation partners; supported contract administration and best management practice compliance under a Registered Professional Forester.</li>
                 </ul>
                 <div class="date">Feb 2024 &ndash; Mar 2026</div>
               </div>
@@ -297,7 +311,7 @@
         <section id="skills">
           <h2>Technical Skills</h2>
 
-          <div class="skills-grid skills-grid-3">
+          <div class="skills-grid">
             <div class="skill-category">
               <h3>Forestry &amp; Field Operations</h3>
               <div class="skill-tags">
@@ -365,7 +379,7 @@
     <footer>
       <div class="container">
         <p>&copy; 2026 William Steinley. All rights reserved.</p>
-        <p style="font-size: 0.9rem; opacity: 0.8;">Forester &amp; GIS Analyst | Gold Run, California</p>
+        <p class="footer-sub">Forester &amp; GIS Analyst &middot; Gold Run, California</p>
       </div>
     </footer>
   </body>
