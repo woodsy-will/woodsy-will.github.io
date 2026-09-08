@@ -10,15 +10,14 @@
     <header>
       <div class="container">
         <h1>William Steinley</h1>
-        <p>Forester &amp; GIS Analyst | Timber inventory, LiDAR, remote sensing, map production | Northern California</p>
+        <p>Forester &middot; GIS Analyst &middot; M.S. Forestry | Timber inventory, LiDAR and terrain analysis, ArcGIS and open-source mapping | Gold Run, California</p>
       </div>
     </header>
 
     <nav>
       <div class="container">
         <a href="#resume">Resume</a>
-        <a href="#gis-projects">GIS Projects</a>
-        <a href="#tools">Development Tools</a>
+        <a href="#gis-projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
@@ -29,44 +28,119 @@
         <!-- RESUME SECTION -->
         <section id="resume">
           <h2>About</h2>
-          <p>I am a forester and GIS analyst in the northern Sierra Nevada. I worked under a California Registered Professional Forester on USFS Region 5 forest-health and fuels projects, where my job was to turn field cruise data into stand metrics, QC reports and maps that a forester could act on. That is still the work I want to do: inventory analysis, harvest-plan mapping, LiDAR and satellite analysis for stand structure and post-fire recovery, and the Python and QGIS tooling that makes it repeatable.</p>
-          <p>The four projects below are built on the same section of Nevada County timberland and one nearby fire, using only public data, so anyone can rerun them. Each one states what is measured and what is simulated. I work in QGIS and PyQGIS, Python (pandas, GDAL, PDAL, GeoPandas), PostGIS, and Excel, and I am comfortable in ArcGIS Pro.</p>
+          <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R and Python. I deploy ArcGIS Pro, Field Maps and Survey123 for field data collection, automate map production and spatial processing with ArcPy and lidR, and use AI-assisted development tools to build that automation faster. I am lead author of a published fire ecology study.</p>
+          <p>The four projects below are built on the same section of Nevada County timberland and one nearby fire, using only public data, so anyone can rerun them. Each one states what is measured and what is simulated. They are built in QGIS and PyQGIS, Python (pandas, GDAL, PDAL, GeoPandas), PostGIS and Excel; the same workflows run in ArcGIS Pro and ArcPy, which is where I did them professionally.</p>
           <h2>Professional Resume</h2>
 
           <div class="resume-section">
             <div>
-              <h3 style="color: #2d5016; margin-top: 1.5rem; margin-bottom: 1rem;">Experience</h3>
+              <h3 class="resume-heading">Experience</h3>
 
               <div class="experience-item">
-                <div class="position">Forester / GIS Developer</div>
-                <div class="company">Jefferson Resource Company</div>
-                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Worked under a California Registered Professional Forester on USFS Region 5 forest-health and fuels projects on the Plumas National Forest: timber cruise data analysis, cruise QC and sampling statistics, the GIS and reporting tools behind them, spatial data management, and map production.</p>
-                <div class="date">Through 2026</div>
+                <div class="position">Principal / Consulting Forester</div>
+                <div class="company">Athena Resource Group &middot; Gold Run, CA (field projects in Texas) &middot; part-time consulting practice</div>
+                <ul class="resume-bullets">
+                  <li>Write land management plans for private landowners, translating owner objectives into written prescriptions and treatment schedules.</li>
+                  <li>Perform the prescribed treatments personally: chainsaw and hand thinning, brush and invasive species control.</li>
+                  <li>Run business operations for the two-person firm: client acquisition, project scoping and invoicing.</li>
+                </ul>
+                <div class="date">Mar 2026 &ndash; Present</div>
               </div>
 
-              <div class="experience-item" style="margin-top: 1rem;">
-                <div class="position">Full Stack Developer</div>
-                <div class="company">Independent Projects</div>
-                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Building web applications that integrate GIS technologies with modern web frameworks. Focus on Python, JavaScript, and database architecture.</p>
-                <div class="date">Ongoing</div>
+              <div class="experience-item">
+                <div class="position">Forester III</div>
+                <div class="company">Jefferson Resource Company &middot; Placerville, CA</div>
+                <ul class="resume-bullets">
+                  <li>Supervised field crews of up to four across ~8,000 acres of the Plumas National Forest Community Protection Project, overseeing and analyzing 500+ plots and catching layout, marking and survey errors before they reached USFS deliverables; implemented NEPA requirements and silvicultural prescriptions in the field, including unit layout for helicopter yarding.</li>
+                  <li>Led the transition from Avenza Maps Pro to ArcGIS Online, ArcGIS Pro, Field Maps and Survey123, authoring two technical guides and the training materials that drove adoption; eliminated manual re-keying of field data.</li>
+                  <li>Automated cartographic production and spatial data processing in Python and ArcPy; generated CHM and DTM products from LiDAR in R (lidR), with slope and terrain derivatives informing yarding system selection and harvest unit delineation.</li>
+                  <li>Developed R and lidR routines for individual tree crown delineation and canopy cover estimation as an open-source alternative to licensed processing software.</li>
+                  <li>Published and maintained 40+ hosted feature layers and geodatabases and managed offline map areas across three project areas for stream, inventory plot, archaeological and forest health surveys.</li>
+                  <li>Field liaison between JRC, USFS timber staff and National Forest Foundation partners; supported contract administration and BMP compliance under a Registered Professional Forester.</li>
+                </ul>
+                <div class="date">Feb 2024 &ndash; Mar 2026</div>
+              </div>
+
+              <div class="experience-item">
+                <div class="position">M.S. Thesis Completion &amp; Relocation</div>
+                <div class="company">Stephen F. Austin State University &middot; relocated to California</div>
+                <ul class="resume-bullets">
+                  <li>Completed M.S. thesis research and writing on fire return interval effects in East Texas upland pine ecosystems; relocated to California and secured forestry employment in-state.</li>
+                </ul>
+                <div class="date">Jul 2023 &ndash; Feb 2024</div>
+              </div>
+
+              <div class="experience-item">
+                <div class="position">Forester</div>
+                <div class="company">Sunrise Pines Forestry &middot; CA, MT, AZ, OK, LA, AR, TX</div>
+                <ul class="resume-bullets">
+                  <li>Laid out timber sales across seven states, from Rocky Mountain mixed conifer to Gulf Coastal Plain pine, with ground-based systems throughout and cable systems on steep terrain in California and Montana.</li>
+                  <li>Cruised timber by fixed-plot, variable-radius, strip and 100% methods, including 250+ plots personally run in eastern Oklahoma; compiled cruise data into volume summaries for appraisals, management plans and harvest scheduling.</li>
+                  <li>Marked timber to silvicultural prescriptions from ponderosa pine and mixed conifer to bottomland hardwood and shortleaf pine; coordinated with landowners, consulting foresters and logging contractors.</li>
+                </ul>
+                <div class="date">Apr 2022 &ndash; Jul 2023</div>
+              </div>
+
+              <div class="experience-item">
+                <div class="position">Fuels Technician</div>
+                <div class="company">Fire Safe Council of Nevada County &middot; Grass Valley, CA</div>
+                <ul class="resume-bullets">
+                  <li>Implemented fuel reduction prescriptions under an RPF with chainsaws, tow-chippers, tracked masticators and hand tools; built control lines to burn plan specifications and worked prescribed fire ignition, holding and mop-up.</li>
+                </ul>
+                <div class="date">Jan 2022 &ndash; Apr 2022</div>
+              </div>
+
+              <div class="experience-item">
+                <div class="position">Graduate Teaching Assistant</div>
+                <div class="company">Stephen F. Austin State University &middot; Nacogdoches, TX</div>
+                <ul class="resume-bullets">
+                  <li>Instructed lab sections of 30&ndash;50 undergraduates per semester in Introduction to Forestry and Forest Biometrics: mensuration, sampling design and spatial analysis, with field trips.</li>
+                  <li>Assisted faculty during the six-week summer field station, staging equipment and tracking accountability for 100+ students in timber cruising, silviculture and management planning exercises.</li>
+                </ul>
+                <div class="date">Aug 2019 &ndash; Jan 2022</div>
+              </div>
+
+              <div class="experience-item">
+                <div class="position">Fuels Technician</div>
+                <div class="company">TimberPro Forest Service &middot; Nacogdoches, TX</div>
+                <ul class="resume-bullets">
+                  <li>Operated a D5 bulldozer to construct control lines and suppress slopovers and spot fires during prescribed burns across East Texas pine plantations; drip-torch ignition, ATV line inspection and hand-tool suppression across multiple burn units.</li>
+                </ul>
+                <div class="date">Nov 2017 &ndash; May 2019</div>
               </div>
             </div>
 
             <div>
-              <h3 style="color: #2d5016; margin-top: 1.5rem; margin-bottom: 1rem;">Education & Certifications</h3>
+              <h3 class="resume-heading">Education</h3>
 
               <div class="education-item">
-                <div class="degree">Expertise in Geographic Information Systems</div>
-                <div class="institution">Continuous Professional Development</div>
-                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Advanced training in GIS analysis, spatial databases, and geospatial software development.</p>
-                <div class="date">Specialized Training</div>
+                <div class="degree">Master of Science in Forestry</div>
+                <div class="institution">Stephen F. Austin State University</div>
+                <p class="resume-note">Thesis: <em>Influence of Altered Fire Return Intervals on Plant Diversity in the East Texas Pineywoods</em>. Xi Sigma Pi Forestry Honor Society.</p>
+                <div class="date">2024</div>
               </div>
 
-              <div class="education-item" style="margin-top: 1rem;">
-                <div class="degree">Full Stack Web Development</div>
-                <div class="institution">Self-Directed Learning</div>
-                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Expertise in modern web technologies including PostgreSQL, Python, JavaScript, and API development.</p>
-                <div class="date">Current</div>
+              <div class="education-item">
+                <div class="degree">Bachelor of Science in Forestry</div>
+                <div class="institution">Stephen F. Austin State University</div>
+                <p class="resume-note">Minor in Spatial Science, concentration in Fire Management. Coursework in forest biometrics, GIS and remote sensing, fire ecology, spatial science and silviculture.</p>
+                <div class="date">2019</div>
+              </div>
+
+              <h3 class="resume-heading">Certifications &amp; Qualifications</h3>
+              <div class="education-item">
+                <ul class="resume-bullets">
+                  <li>California Registered Professional Forester (RPF), exam eligible (California Board of Forestry and Fire Protection)</li>
+                  <li>ISA Certified Arborist, exam eligible (International Society of Arboriculture)</li>
+                  <li>Qualified Timber Cruiser, U.S. Forest Service Region 3</li>
+                  <li>Tree Risk Assessment Qualification (TRAQ), International Society of Arboriculture</li>
+                  <li>CPR, current</li>
+                </ul>
+              </div>
+
+              <h3 class="resume-heading">Publication</h3>
+              <div class="education-item">
+                <p class="resume-note">Steinley, W. J., Oswald, B. P., Kidd, K. R., &amp; Glasscock, J. (2024). Influence of altered fire return intervals on plant diversity in the East Texas Pineywoods. <em>Journal of Forest Research</em>, 13(5), 529. <a href="https://doi.org/10.35248/2168-9776.24.13.529" class="gis-link" target="_blank" style="margin-top:0">DOI: 10.35248/2168-9776.24.13.529 &rarr;</a></p>
               </div>
             </div>
           </div>
@@ -74,8 +148,8 @@
 
         <!-- GIS PROJECTS SECTION -->
         <section id="gis-projects">
-          <h2>GIS Projects & Initiatives</h2>
-          <p>Forestry-focused geospatial work: map production for timber harvest planning, spatial databases, and data pipelines.</p>
+          <h2>GIS Projects</h2>
+          <p>Forestry geospatial work built from public data: harvest-plan map production, forest inventory analysis, LiDAR stand structure and post-fire remote sensing, plus the tools behind them.</p>
 
           <div class="featured-project">
             <a href="projects/thp-map-packet/sheet3_watercourses_wlpz.jpg" target="_blank" class="featured-image">
@@ -193,153 +267,81 @@
 
           <div class="gis-projects-grid">
             <div class="gis-project-card">
-              <h3>PostgreSQL-GIS Server Home Lab</h3>
-              <p>A comprehensive geospatial database laboratory featuring PostgreSQL with PostGIS extensions. Designed for advanced spatial query testing, geometric computations, and development of GIS-enabled applications.</p>
+              <h3>Forest Inventory Analyzer</h3>
+              <p>A command-line and web-UI cruise compiler written in Rust: reads CSV, JSON and Excel plot data and produces trees per acre, basal area, cubic and board-foot volume, QMD, species composition, diameter distributions, sampling statistics with confidence intervals, and growth projections. Ships as a Windows installer with CI builds.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Rust</span>
+                <span class="tech-badge">Forest Mensuration</span>
+                <span class="tech-badge">Sampling Statistics</span>
+                <span class="tech-badge">Excel / GeoJSON</span>
+              </div>
+              <a href="https://github.com/woodsy-will/forest-inventory-analyzer-rust" class="gis-link" target="_blank">Source &amp; releases on GitHub &rarr;</a>
+            </div>
+
+            <div class="gis-project-card">
+              <h3>PostgreSQL / PostGIS GIS Server</h3>
+              <p>A self-hosted spatial database stack (PostgreSQL 16 with PostGIS, pgAdmin, Grafana and Prometheus monitoring) in Docker, with nightly encrypted dumps and off-site copies. Used for geodatabase design, spatial SQL and serving project layers to QGIS and ArcGIS Pro.</p>
               <div class="project-tech">
                 <span class="tech-badge">PostgreSQL</span>
                 <span class="tech-badge">PostGIS</span>
-                <span class="tech-badge">Spatial DB</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Geodatabase Design</span>
               </div>
-              <a href="https://github.com/woodsy-will/PostgreSQL-GIS-Server-Home-Lab" class="gis-link" target="_blank">View on GitHub →</a>
-            </div>
-
-            <div class="gis-project-card">
-              <h3>PICNIC-PURSUIT</h3>
-              <p>An interactive application combining location-based services with recreational data analysis. Integrates mapping, geospatial queries, and data visualization for outdoor activity planning and discovery.</p>
-              <div class="project-tech">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">GIS</span>
-                <span class="tech-badge">Mapping</span>
-              </div>
-              <a href="https://github.com/woodsy-will/PICNIC-PURSUIT" class="gis-link" target="_blank">View on GitHub →</a>
-            </div>
-
-            <div class="gis-project-card">
-              <h3>Forestry Knowledge Web Scraper</h3>
-              <p>Python-based system for automated collection and aggregation of forestry data from multiple online sources. Demonstrates data pipeline development and geospatial data integration techniques.</p>
-              <div class="project-tech">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Web Scraping</span>
-                <span class="tech-badge">Data Pipeline</span>
-              </div>
-              <a href="https://github.com/woodsy-will/forestry-knowledge-web-scraper" class="gis-link" target="_blank">View on GitHub →</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- DEVELOPMENT TOOLS & PRODUCTS SECTION -->
-        <section id="tools">
-          <h2>Development Tools & Products</h2>
-          <p>Software tools, frameworks, and products developed to enhance productivity and solve specific technical challenges.</p>
-
-          <div class="tools-products-grid">
-            <div class="tool-card">
-              <span class="tool-icon">🔧</span>
-              <h3>ForestHub</h3>
-              <p>Comprehensive platform for forestry data management and spatial analysis. Integrates multiple geospatial data sources with modern web technologies.</p>
-              <span class="tool-type">Platform</span>
-            </div>
-
-            <div class="tool-card">
-              <span class="tool-icon">🤖</span>
-              <h3>Hexagents</h3>
-              <p>Advanced agent-based system for distributed geospatial processing and analysis. Demonstrates modern approaches to handling complex spatial computations.</p>
-              <span class="tool-type">Framework</span>
-            </div>
-
-            <div class="tool-card">
-              <span class="tool-icon">🔌</span>
-              <h3>MCP-Server-ArcGIS-Pro-AddIn</h3>
-              <p>Integration module connecting Claude AI with ArcGIS Pro for intelligent geospatial analysis and automation. Bridges AI capabilities with professional GIS software.</p>
-              <span class="tool-type">Integration</span>
-            </div>
-
-            <div class="tool-card">
-              <span class="tool-icon">📚</span>
-              <h3>Claude Code Templates - Forestry</h3>
-              <p>Curated collection of code templates and snippets for common forestry and GIS programming tasks. Accelerates development of geospatial solutions.</p>
-              <span class="tool-type">Code Library</span>
-            </div>
-
-            <div class="tool-card">
-              <span class="tool-icon">🗺️</span>
-              <h3>Right-Click Folder Tools</h3>
-              <p>Utility suite for Windows file system integration. Provides quick access to common operations directly from Windows Explorer context menus.</p>
-              <span class="tool-type">Utility</span>
-            </div>
-
-            <div class="tool-card">
-              <span class="tool-icon">🌍</span>
-              <h3>Spatial Data Tools</h3>
-              <p>Collection of command-line and scripted tools for geospatial data manipulation, transformation, and analysis at scale.</p>
-              <span class="tool-type">Tools</span>
+              <p class="featured-note">Private repository; walkthrough available on request.</p>
             </div>
           </div>
         </section>
 
         <!-- SKILLS SECTION -->
         <section id="skills">
-          <h2>Technical Skills & Expertise</h2>
+          <h2>Technical Skills</h2>
 
-          <div class="skills-grid">
+          <div class="skills-grid skills-grid-3">
             <div class="skill-category">
-              <h3>GIS & Geospatial</h3>
+              <h3>Forestry &amp; Field Operations</h3>
               <div class="skill-tags">
-                <span class="skill-tag">ArcGIS Pro</span>
-                <span class="skill-tag">PostGIS</span>
-                <span class="skill-tag">QGIS</span>
-                <span class="skill-tag">Spatial Analysis</span>
-                <span class="skill-tag">Mapping</span>
+                <span class="skill-tag">Timber Cruising (fixed-plot, variable-radius, strip, 100%)</span>
+                <span class="skill-tag">Timber Sale Layout</span>
+                <span class="skill-tag">Silvicultural Prescriptions</span>
+                <span class="skill-tag">Cable, Helicopter &amp; Tractor Logging Systems</span>
+                <span class="skill-tag">Prescribed Fire &amp; Fuels Reduction</span>
+                <span class="skill-tag">Forest Inventory</span>
+                <span class="skill-tag">Crew Supervision &amp; QC</span>
+                <span class="skill-tag">NEPA Implementation</span>
+                <span class="skill-tag">Vegetation Management</span>
               </div>
             </div>
 
             <div class="skill-category">
-              <h3>Programming Languages</h3>
+              <h3>GIS &amp; Spatial Science</h3>
               <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">ArcGIS Pro 3.x</span>
+                <span class="skill-tag">ArcGIS Online</span>
+                <span class="skill-tag">Field Maps</span>
+                <span class="skill-tag">Survey123</span>
+                <span class="skill-tag">QGIS / PyQGIS</span>
+                <span class="skill-tag">LiDAR Processing (CHM, DTM)</span>
+                <span class="skill-tag">Canopy Cover Analysis</span>
+                <span class="skill-tag">Slope &amp; Terrain Modeling</span>
+                <span class="skill-tag">Geodatabase Design</span>
+                <span class="skill-tag">PostGIS</span>
+                <span class="skill-tag">Cartographic Production</span>
+                <span class="skill-tag">Coordinate Reference Systems</span>
+                <span class="skill-tag">Web Mapping &amp; Cloud GIS</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Programming &amp; Data</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">R (lidR, terra, sf, tidyverse)</span>
+                <span class="skill-tag">Python (ArcPy, pandas, GeoPandas, rasterio, GDAL, PDAL)</span>
                 <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Bash</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Database Technologies</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">PostGIS</span>
-                <span class="skill-tag">Database Design</span>
-                <span class="skill-tag">Data Modeling</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Web Development</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">Full Stack</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Development Tools</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">VS Code</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Data & Analysis</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Data Pipeline</span>
-                <span class="skill-tag">Analysis</span>
-                <span class="skill-tag">Visualization</span>
-                <span class="skill-tag">Web Scraping</span>
+                <span class="skill-tag">Statistical Analysis</span>
+                <span class="skill-tag">Git &amp; GitHub</span>
+                <span class="skill-tag">AI-Assisted Development (Claude Code, Cursor)</span>
+                <span class="skill-tag">Automated Workflows</span>
+                <span class="skill-tag">Technical Writing</span>
               </div>
             </div>
           </div>
@@ -348,7 +350,7 @@
         <!-- CONTACT SECTION -->
         <section id="contact">
           <h2>Get In Touch</h2>
-          <p>I'm always interested in new opportunities, collaborations, and discussions about geospatial technology, GIS development, and innovative applications of spatial data.</p>
+          <p>Open to forester and GIS analyst roles in northern California and remote geospatial work, and to consulting on inventory, LiDAR and harvest-plan mapping. Based in Gold Run, California.</p>
 
           <div class="contact-links">
             <a href="https://github.com/woodsy-will" class="contact-link" target="_blank">GitHub</a>
@@ -361,7 +363,7 @@
     <footer>
       <div class="container">
         <p>&copy; 2026 William Steinley. All rights reserved.</p>
-        <p style="font-size: 0.9rem; opacity: 0.8;">Forester &amp; GIS Analyst | Northern California</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Forester &amp; GIS Analyst | Gold Run, California</p>
       </div>
     </footer>
   </body>
