@@ -43,7 +43,7 @@
         <section id="resume">
           <h2>About</h2>
           <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester (RPF) exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R and Python. At Jefferson Resource Company I deployed ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production and spatial processing with ArcPy and lidR; I still use AI-assisted development tools to build that kind of automation faster. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
-          <p>The project below is built entirely from public data so anyone can rerun it, and it states what is measured and what is inferred. It is built in QGIS and PyQGIS and Python (GDAL, GeoPandas); the same kinds of work, post-fire assessment, timber sale and harvest-unit mapping, inventory analysis and LiDAR stand structure, are ones I did in ArcGIS Pro and ArcPy on federal projects. All of my California work has been on National Forest land.</p>
+          <p>The tool below is open source so anyone can run it against their own cruise data. The same kinds of work, timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment, are ones I did in ArcGIS Pro and ArcPy on federal projects. All of my California work has been on National Forest land.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF, 2 pages)</a></p>
 
@@ -165,37 +165,7 @@
         <!-- GIS PROJECTS SECTION -->
         <section id="gis-projects">
           <h2>GIS Projects</h2>
-          <p>Forestry geospatial work built from public data: Sentinel-2 burn severity mapping, plus the inventory tooling behind my field work. The mapping project ends with a note on what I would do differently.</p>
-
-          <div class="featured-project">
-            <a href="projects/burn-severity/sheet1_severity.jpg" target="_blank" class="featured-image">
-              <img src="projects/burn-severity/thumb_severity.jpg" alt="Mosquito Fire burn severity map from Sentinel-2 dNBR" loading="lazy">
-            </a>
-            <div class="featured-body">
-              <h3>Burn Severity Mapping &mdash; Mosquito Fire, 2022</h3>
-              <p>Sentinel-2 differenced Normalized Burn Ratio for the 76,788-acre Mosquito Fire in Placer and El Dorado counties, read as windowed cloud-optimized GeoTIFFs straight from AWS. Standard Key &amp; Benson classes with scene-classification masking, an initial (7-week) versus extended (one-year) comparison that quantifies delayed mortality, severity by ownership, elevation, aspect and slope, and a high-severity patch and seed-source distance analysis for reforestation planning. 25 % of the fire (18,822 acres) burned at high severity; 26 % of that is more than 500 ft from surviving canopy.</p>
-              <div class="project-tech">
-                <span class="tech-badge">Sentinel-2 / dNBR</span>
-                <span class="tech-badge">STAC + COG</span>
-                <span class="tech-badge">GDAL / NumPy</span>
-                <span class="tech-badge">PyQGIS</span>
-                <span class="tech-badge">Post-fire Forestry</span>
-              </div>
-              <div class="featured-links">
-                <a href="projects/burn-severity/Sheet1_Burn_Severity.pdf" class="gis-link" target="_blank">Sheet 1: Burn severity (PDF) &rarr;</a>
-                <a href="projects/burn-severity/Sheet2_Imagery_and_Assessments.pdf" class="gis-link" target="_blank">Sheet 2: Imagery &amp; assessments (PDF) &rarr;</a>
-                <a href="projects/burn-severity/Sheet3_High_Severity_Patches.pdf" class="gis-link" target="_blank">Sheet 3: High-severity patches (PDF) &rarr;</a>
-                <a href="projects/burn-severity/Mosquito_Fire_Burn_Severity.xlsx" class="gis-link">Summary workbook (Excel) &rarr;</a>
-                <a href="https://github.com/woodsy-will/burn-severity-mosquito" class="gis-link" target="_blank">Source, GeoTIFFs &amp; tables on GitHub &rarr;</a>
-              </div>
-              <div class="featured-gallery">
-                <a href="projects/burn-severity/sheet2_imagery.jpg" target="_blank"><img src="projects/burn-severity/sheet2_imagery.jpg" alt="Pre- and post-fire false colour imagery with initial and extended severity" loading="lazy"></a>
-                <a href="projects/burn-severity/sheet3_patches.jpg" target="_blank"><img src="projects/burn-severity/sheet3_patches.jpg" alt="High-severity patches by size and seed-source distance" loading="lazy"></a>
-              </div>
-              <p class="featured-note">Demonstration from public data; not an official BAER or MTBS product.</p>
-              <p class="featured-reflect"><strong>What I would do differently:</strong> check the severity classes against the MTBS product and any field composite burn index plots before reporting acreages, build cloud-free composites instead of relying on three single scenes, and use parcel ownership so the private category is not a catch-all.</p>
-            </div>
-          </div>
+          <p>The inventory tooling behind my field work, published as open source.</p>
 
           <div class="gis-projects-grid">
             <div class="gis-project-card">
@@ -238,9 +208,9 @@
                 <li><strong>LiDAR processing</strong> &mdash; canopy height and terrain models (CHM, DTM) in R (lidR) at JRC on Plumas National Forest projects, with tree crown delineation and canopy cover estimation from the point clouds.</li>
                 <li><strong>Slope and terrain modeling</strong> &mdash; terrain derivatives that informed yarding system selection and harvest unit delineation at JRC.</li>
                 <li><strong>Cartographic production</strong> &mdash; automated map assembly in ArcPy at JRC; every map sheet in this portfolio produced with PyQGIS layouts.</li>
-                <li><strong>QGIS, GDAL, PDAL</strong> &mdash; open-source toolchain used alongside ArcGIS; the burn severity project reads cloud-optimized GeoTIFFs straight from AWS through GDAL.</li>
-                <li><strong>Geodatabases and coordinate systems</strong> &mdash; project geodatabases and offline areas at JRC; UTM Zone 10N processing throughout the burn severity pipeline.</li>
-                <li><strong>Remote sensing and web mapping</strong> &mdash; Sentinel-2 dNBR burn severity assessment; ArcGIS Online web maps and hosted layers at JRC.</li>
+                <li><strong>QGIS, GDAL, PDAL</strong> &mdash; open-source toolchain used alongside ArcGIS Pro for terrain processing and map production.</li>
+                <li><strong>Geodatabases and coordinate systems</strong> &mdash; project geodatabases and offline areas at JRC; UTM and State Plane workflows across multi-state sale layout.</li>
+                <li><strong>Remote sensing and web mapping</strong> &mdash; post-fire imagery assessment on federal projects; ArcGIS Online web maps and hosted layers at JRC.</li>
               </ul>
             </div>
 
@@ -248,9 +218,9 @@
               <h3>Programming &amp; Data</h3>
               <ul class="skill-list">
                 <li><strong>R (lidR, terra, sf, tidyverse)</strong> &mdash; individual tree crown delineation and canopy cover routines at JRC as an open-source alternative to licensed software; thesis analysis.</li>
-<li><strong>Python (ArcPy, pandas, GeoPandas, GDAL, NumPy)</strong> &mdash; cartographic and spatial-processing automation at JRC; the burn severity pipeline here.</li>
+                <li><strong>Python (ArcPy, pandas, GeoPandas, GDAL, NumPy)</strong> &mdash; cartographic and spatial-processing automation at JRC.</li>
 <li><strong>Statistical analysis</strong> &mdash; sampling statistics, confidence intervals and plots-needed calculations in the Forest Inventory Analyzer; plant diversity analysis for the thesis in R.</li>
-<li><strong>Excel</strong> &mdash; cruise compilation and inventory workbooks at JRC and in consulting; the burn severity summary workbook here is generated with openpyxl.</li>
+                <li><strong>Excel</strong> &mdash; cruise compilation and inventory workbooks at JRC and in consulting.</li>
                 <li><strong>Rust</strong> &mdash; the Forest Inventory Analyzer, a cruise compiler with a web UI and CI builds.</li>
                 <li><strong>Git and GitHub</strong> &mdash; every project here is a public repository with its scripts and data sources documented.</li>
                 <li><strong>AI-assisted development (Claude Code, Cursor)</strong> &mdash; accelerated ArcPy and lidR automation at JRC, with outputs validated against manual quality-control checks.</li>
