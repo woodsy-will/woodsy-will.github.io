@@ -43,7 +43,7 @@
         <section id="resume">
           <h2>About</h2>
           <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester (RPF) exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R and Python. At Jefferson Resource Company I deployed ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production and spatial processing with ArcPy and lidR; I still use AI-assisted development tools to build that kind of automation faster. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
-          <p>The four projects below are built on the same section of Nevada County timberland and one nearby fire, using only public data, so anyone can rerun them. Each one states what is measured and what is simulated. They are built in QGIS and PyQGIS, Python (pandas, GDAL, PDAL, GeoPandas) and Excel; the same kinds of work, timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment, are ones I did in ArcGIS Pro and ArcPy on federal projects. All of my California work has been on National Forest land. The harvest-plan packet is a self-directed exercise in California Forest Practice Rules mapping; I have not prepared or assisted on a Timber Harvesting Plan.</p>
+          <p>The project below is built entirely from public data so anyone can rerun it, and it states what is measured and what is inferred. It is built in QGIS and PyQGIS and Python (GDAL, GeoPandas); the same kinds of work, post-fire assessment, timber sale and harvest-unit mapping, inventory analysis and LiDAR stand structure, are ones I did in ArcGIS Pro and ArcPy on federal projects. All of my California work has been on National Forest land.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF, 2 pages)</a></p>
 
@@ -165,94 +165,7 @@
         <!-- GIS PROJECTS SECTION -->
         <section id="gis-projects">
           <h2>GIS Projects</h2>
-          <p>Forestry geospatial work built from public data: harvest-unit map production, forest inventory analysis, LiDAR stand structure and post-fire remote sensing, plus the tools behind them. Each project ends with a note on what I would do differently.</p>
-
-          <div class="featured-project">
-            <a href="projects/thp-map-packet/sheet3_watercourses_wlpz.jpg" target="_blank" class="featured-image">
-              <img src="projects/thp-map-packet/thumb_sheet3.jpg" alt="THP map sheet 3: Class I, II and III watercourses with WLPZ and ELZ buffers over slope classes" loading="lazy">
-            </a>
-            <div class="featured-body">
-              <h3>Timber Harvesting Plan Map Packet &mdash; North Fork Deer Creek</h3>
-              <p>A five-sheet THP map set for a 624-acre private timberland section in Nevada County, California, built entirely from public data (USGS 3DEP and NHD, BLM PLSS and ownership, NAIP imagery, OpenStreetMap). Watercourses are classified from NHD flow regime and buffered per 14 CCR 916.5 by side slope; harvest units, landings and crossings are derived from slope, protection zones and the existing road network. The whole packet is reproducible from three Python scripts run through QGIS.</p>
-              <div class="project-tech">
-                <span class="tech-badge">QGIS / PyQGIS</span>
-                <span class="tech-badge">GDAL</span>
-                <span class="tech-badge">GeoPandas</span>
-                <span class="tech-badge">Forest Practice Rules</span>
-                <span class="tech-badge">11x17 Cartography</span>
-              </div>
-              <div class="featured-links">
-                <a href="projects/thp-map-packet/NF_Deer_Creek_THP_Map_Packet.pdf" class="gis-link" target="_blank">Full packet (5 sheets, PDF, 16 MB) &rarr;</a>
-                <a href="projects/thp-map-packet/Sheet3_Watercourses_WLPZ.pdf" class="gis-link" target="_blank">Sheet 3: Watercourses &amp; WLPZ (PDF) &rarr;</a>
-                <a href="https://github.com/woodsy-will/thp-map-packet" class="gis-link" target="_blank">Source &amp; scripts on GitHub &rarr;</a>
-              </div>
-              <div class="featured-gallery">
-                <a href="projects/thp-map-packet/sheet4_silviculture.jpg" target="_blank"><img src="projects/thp-map-packet/sheet4_silviculture.jpg" alt="Sheet 4: silviculture, yarding and operations" loading="lazy"></a>
-                <a href="projects/thp-map-packet/sheet5_aerial_units.jpg" target="_blank"><img src="projects/thp-map-packet/sheet5_aerial_units.jpg" alt="Sheet 5: aerial photo with harvest units" loading="lazy"></a>
-              </div>
-              <p class="featured-note">Demonstration project: no field work, watercourse classes and prescriptions are provisional, and not a proposal for the actual landowner. I have not prepared or assisted on a THP; this is a self-directed exercise in Forest Practice Rules mapping.</p>
-              <p class="featured-reflect"><strong>What I would do differently:</strong> replace the NHD flow-regime proxy with a field watercourse classification signed off by an RPF, walk the OpenStreetMap roads before siting landings and crossings, and draw the ownership boundary from parcel data rather than BLM surface-management polygons, which do not separate private parcels.</p>
-            </div>
-          </div>
-
-          <div class="featured-project">
-            <a href="https://woodsy-will.github.io/forest-inventory-dashboard/" target="_blank" class="featured-image">
-              <img src="projects/forest-inventory/thumb_dashboard.jpg" alt="Forest inventory dashboard: stat tiles, stand map, species and diameter charts" loading="lazy">
-            </a>
-            <div class="featured-body">
-              <h3>Forest Inventory Analysis &amp; Dashboard &mdash; North Fork Deer Creek</h3>
-              <p>A full cruise-to-report workflow on the seven harvest units of the THP above: a BAF 20 cruise on a 400 ft grid (142 plots, 534 acres), field-data QC that catches six planted recording errors, stand metrics (basal area, QMD, summation-form SDI against the FVS Western Sierra maximum), Scribner volume, 95 % sampling statistics with plots-needed, and a simulated marking with pre/post structure and harvest volume. Cruise data are simulated and labeled as such; everything else is the real workflow.</p>
-              <div class="project-tech">
-                <span class="tech-badge">Forest Mensuration</span>
-                <span class="tech-badge">Python / pandas</span>
-                <span class="tech-badge">Excel (openpyxl)</span>
-                <span class="tech-badge">PyQGIS</span>
-                <span class="tech-badge">Leaflet + Chart.js</span>
-                <span class="tech-badge">ReportLab</span>
-              </div>
-              <div class="featured-links">
-                <a href="https://woodsy-will.github.io/forest-inventory-dashboard/" class="gis-link" target="_blank">Interactive dashboard &rarr;</a>
-                <a href="projects/forest-inventory/NF_Deer_Creek_Inventory_Report.pdf" class="gis-link" target="_blank">Inventory report (PDF, 11 pages) &rarr;</a>
-                <a href="projects/forest-inventory/NF_Deer_Creek_Inventory.xlsx" class="gis-link">Excel workbook (10 sheets) &rarr;</a>
-                <a href="projects/forest-inventory/Stand_Inventory_Map.pdf" class="gis-link" target="_blank">Stand map (11x17 PDF) &rarr;</a>
-                <a href="https://github.com/woodsy-will/forest-inventory-dashboard" class="gis-link" target="_blank">Source &amp; scripts on GitHub &rarr;</a>
-              </div>
-              <div class="featured-gallery">
-                <a href="projects/forest-inventory/stand_map.jpg" target="_blank"><img src="projects/forest-inventory/stand_map.jpg" alt="Stand inventory map: units shaded by relative density, plots sized by basal area" loading="lazy"></a>
-                <a href="projects/forest-inventory/NF_Deer_Creek_Inventory_Report.pdf" target="_blank"><img src="projects/forest-inventory/report_p1.jpg" alt="First page of the inventory report" loading="lazy"></a>
-              </div>
-              <p class="featured-note">Demonstration project: the cruise data are simulated; the plan area, units and terrain are real public data.</p>
-              <p class="featured-reflect"><strong>What I would do differently:</strong> swap the documented form-factor volume approximation for published regional volume equations, size the cruise from a pilot sample instead of a fixed 400 ft grid, and add a double-sampling check against the LiDAR heights from the next project so the two pieces validate each other.</p>
-            </div>
-          </div>
-
-          <div class="featured-project">
-            <a href="projects/lidar-canopy/sheet1_chm.jpg" target="_blank" class="featured-image">
-              <img src="projects/lidar-canopy/thumb_chm.jpg" alt="LiDAR canopy height model of the plan area with a tree-top detail inset" loading="lazy">
-            </a>
-            <div class="featured-body">
-              <h3>LiDAR Canopy Height &amp; Stand Structure &mdash; North Fork Deer Creek</h3>
-              <p>116 million points of USGS 3DEP LiDAR (2022, QL1) over the same section, processed with a streaming PDAL pipeline into a 3 ft canopy height model, then into tree tops (variable-window local maxima with modelled crowns), canopy cover, dominant height, tree-top density and rumple grids, and per-unit and per-plot structure metrics at the piece 2 cruise plots. Plan area: 93 % canopy cover, 95th-percentile height 128 ft, 22,744 tree tops detected. Everything here is measured from real data.</p>
-              <div class="project-tech">
-                <span class="tech-badge">LiDAR / PDAL</span>
-                <span class="tech-badge">USGS 3DEP</span>
-                <span class="tech-badge">NumPy / SciPy</span>
-                <span class="tech-badge">GDAL</span>
-                <span class="tech-badge">PyQGIS</span>
-              </div>
-              <div class="featured-links">
-                <a href="projects/lidar-canopy/Sheet1_Canopy_Height_Model.pdf" class="gis-link" target="_blank">Sheet 1: Canopy height model (PDF) &rarr;</a>
-                <a href="projects/lidar-canopy/Sheet2_Canopy_Cover_Structure.pdf" class="gis-link" target="_blank">Sheet 2: Cover &amp; structure grids (PDF) &rarr;</a>
-                <a href="https://github.com/woodsy-will/lidar-canopy-height" class="gis-link" target="_blank">Source, GeoTIFFs &amp; metrics on GitHub &rarr;</a>
-              </div>
-              <div class="featured-gallery">
-                <a href="projects/lidar-canopy/inset_crowns.jpg" target="_blank"><img src="projects/lidar-canopy/inset_crowns.jpg" alt="Detail: detected tree tops with modelled crowns over the canopy height model" loading="lazy"></a>
-                <a href="projects/lidar-canopy/sheet2_structure.jpg" target="_blank"><img src="projects/lidar-canopy/sheet2_structure.jpg" alt="Four structure grids: canopy cover, dominant height, tree-top density, rumple" loading="lazy"></a>
-              </div>
-              <p class="featured-note">The LiDAR and every metric are real; the plan area and units are the illustrative set from the map packet.</p>
-              <p class="featured-reflect"><strong>What I would do differently:</strong> calibrate the tree-top detection window against measured plot stems rather than a height-based rule, test my own ground classification against the vendor's class 2 returns before building the terrain model, and report per-unit metrics with an uncertainty range instead of single values.</p>
-            </div>
-          </div>
+          <p>Forestry geospatial work built from public data: Sentinel-2 burn severity mapping, plus the inventory tooling behind my field work. The mapping project ends with a note on what I would do differently.</p>
 
           <div class="featured-project">
             <a href="projects/burn-severity/sheet1_severity.jpg" target="_blank" class="featured-image">
@@ -322,12 +235,12 @@
               <h3>GIS &amp; Spatial Science</h3>
               <ul class="skill-list">
                 <li><strong>ArcGIS Pro, ArcGIS Online, Field Maps, Survey123</strong> &mdash; led JRC's move off Avenza Maps; published and maintained 40+ hosted feature layers, managed offline map areas across three project areas, wrote two technical guides and the crew training.</li>
-                <li><strong>LiDAR processing</strong> &mdash; canopy height and terrain models in R (lidR) at JRC; the 116-million-point PDAL pipeline, tree-top detection and structure grids in the LiDAR project here.</li>
-                <li><strong>Slope and terrain modeling</strong> &mdash; terrain derivatives that informed yarding system selection and harvest unit delineation at JRC; slope-class and buffer mapping in the map packet.</li>
+                <li><strong>LiDAR processing</strong> &mdash; canopy height and terrain models (CHM, DTM) in R (lidR) at JRC on Plumas National Forest projects, with tree crown delineation and canopy cover estimation from the point clouds.</li>
+                <li><strong>Slope and terrain modeling</strong> &mdash; terrain derivatives that informed yarding system selection and harvest unit delineation at JRC.</li>
                 <li><strong>Cartographic production</strong> &mdash; automated map assembly in ArcPy at JRC; every map sheet in this portfolio produced with PyQGIS layouts.</li>
-                <li><strong>QGIS, GDAL, PDAL</strong> &mdash; the toolchain behind all four projects, including windowed reads of cloud-optimized GeoTIFFs straight from AWS.</li>
-                <li><strong>Geodatabases and coordinate systems</strong> &mdash; project geodatabases and offline areas at JRC; UTM to State Plane reprojection through the LiDAR and packet pipelines.</li>
-                <li><strong>Remote sensing and web mapping</strong> &mdash; Sentinel-2 dNBR burn severity assessment; the Leaflet and Chart.js inventory dashboard.</li>
+                <li><strong>QGIS, GDAL, PDAL</strong> &mdash; open-source toolchain used alongside ArcGIS; the burn severity project reads cloud-optimized GeoTIFFs straight from AWS through GDAL.</li>
+                <li><strong>Geodatabases and coordinate systems</strong> &mdash; project geodatabases and offline areas at JRC; UTM Zone 10N processing throughout the burn severity pipeline.</li>
+                <li><strong>Remote sensing and web mapping</strong> &mdash; Sentinel-2 dNBR burn severity assessment; ArcGIS Online web maps and hosted layers at JRC.</li>
               </ul>
             </div>
 
