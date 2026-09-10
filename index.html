@@ -165,9 +165,30 @@
         <!-- GIS PROJECTS SECTION -->
         <section id="gis-projects">
           <h2>GIS Projects</h2>
-          <p>The inventory tooling behind my field work, published as open source.</p>
+          <p>A harvest-planning workflow rebuilt on public data, and the inventory tooling behind my field work, both published as open source.</p>
 
           <div class="gis-projects-grid">
+            <div class="gis-project-card">
+              <h3>Mohawk Valley West Slope: LiDAR-based harvest-unit planning</h3>
+              <div class="featured-gallery">
+                <a href="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" alt="11x17 unit sheet for cable unit 404: hillshade, yarding-class tints, hatched units, skyline corridors from selected landings, legend and unit table" loading="lazy"></a>
+                <a href="projects/plumas-lidar-harvest-planning/yarding_class.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/yarding_class.jpg" alt="Yarding class from planning slope over the LiDAR hillshade with demonstration unit outlines" loading="lazy"></a>
+                <a href="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" alt="Skyline profile sheet for unit 404: ground profile, chord, mid-span deflection and minimum clearance for the best corridor from each selected landing" loading="lazy"></a>
+                <a href="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" alt="Field data review sheet for unit 101: stand table, cruise design check, plot map with QA flags and findings" loading="lazy"></a>
+              </div>
+              <p>A self-directed rebuild, on public data only, of the harvest-planning work I did as a Forester III on the Plumas National Forest Community Protection Project. USGS 3DEP LiDAR (650 million points) becomes 3 ft terrain and canopy models; documented rules delineate 24 demonstration units on 1,621 acres; 8,540 skyline corridors are cast from 940 road landings to screen the cable units for deflection, clearance and equipment class; an 11x17 sale-map-style unit series exports as vector print PDF and GeoPDF for Avenza; and a simulated BAF 20 cruise is checked against the Region 5 sampling-error standard on per-unit review sheets. The client deliverables belong to the contractor and the Forest Service and are not shown; every file here was computed from scratch.</p>
+              <div class="project-tech">
+                <span class="tech-badge">PDAL / GDAL</span>
+                <span class="tech-badge">PyQGIS</span>
+                <span class="tech-badge">LiDAR terrain &amp; canopy</span>
+                <span class="tech-badge">Cable yarding analysis</span>
+                <span class="tech-badge">Sale area maps</span>
+                <span class="tech-badge">Cruise QA</span>
+              </div>
+              <p class="featured-note">Demonstration units delineated by documented rules; not a Forest Service proposal, no field verification. Methods, standards and a data dictionary are in the repository.</p>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank">Source, previews &amp; map series on GitHub &rarr;</a>
+            </div>
+
             <div class="gis-project-card">
               <h3>Forest Inventory Analyzer</h3>
               <p>A command-line and web-UI cruise compiler written in Rust: reads CSV, JSON and Excel plot data and produces trees per acre, basal area, cubic and board-foot volume, QMD, species composition, diameter distributions, sampling statistics with confidence intervals, and growth projections. Cross-platform release workflow with a Windows MSI installer; MIT licensed.</p>
@@ -186,7 +207,7 @@
         <!-- SKILLS SECTION -->
         <section id="skills">
           <h2>Technical Skills</h2>
-          <p>Each entry says where the skill was used, so the list can be checked against the resume and the project above.</p>
+          <p>Each entry says where the skill was used, so the list can be checked against the resume and the projects above.</p>
 
           <div class="skills-grid">
             <div class="skill-category">
