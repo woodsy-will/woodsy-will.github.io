@@ -358,6 +358,9 @@ section > h2 + p { color: var(--muted); }
 .featured-image img,
 .featured-gallery img {
   width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: left top;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--surface-2);
