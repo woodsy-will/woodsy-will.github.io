@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="William Steinley, forester and GIS analyst in Gold Run, California: timber inventory, LiDAR and terrain analysis, harvest-unit mapping and post-fire assessment. Portfolio, resume and open-source project code.">
+    <meta name="description" content="William Steinley, GIS forester in Gold Run, California: timber inventory, LiDAR terrain and canopy analysis, harvest-unit mapping and cruise compilation. Portfolio and resume.">
     <meta name="theme-color" content="#2f6b3a">
-    <meta property="og:title" content="William Steinley - Forester &amp; GIS Analyst">
+    <meta property="og:title" content="William Steinley - GIS Forester / Forestry GIS Analyst">
+    <meta property="og:image" content="https://woodsy-will.github.io/projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg">
+    <meta property="og:image:width" content="1870">
+    <meta property="og:image:height" content="1210">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:description" content="Timber inventory, LiDAR and terrain analysis, harvest-unit mapping and post-fire assessment. Portfolio and resume.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://woodsy-will.github.io/">
     <link rel="canonical" href="https://woodsy-will.github.io/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b3a'/%3E%3Cpath d='M32 10 L50 38 H40 L48 50 H36 V56 H28 V50 H16 L24 38 H14 Z' fill='%23eaf3e6'/%3E%3C/svg%3E">
-    <title>William Steinley - Portfolio</title>
+    <title>William Steinley - GIS Forester</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -80,7 +84,7 @@
                 <p><strong>Data.</strong> USGS 3DEP QL1 LiDAR (2018, 650 million points), USFS EDW project areas and roads, NHD, BLM PLSS, Census TIGER.</p>
                 <p><strong>Method.</strong> PDAL and GDAL to 3 ft DTM, CHM and planning slope; rule-based delineation of 24 units; 8,540 skyline corridors from 314 candidate landings screened for deflection, clearance and PNW-39 payload; 25-sheet 11x17 series as print PDF and Avenza GeoPDF from PyQGIS; simulated BAF 20 cruise checked to FSH 2409.12.</p>
                 <p><strong>Result.</strong> 1,621 gross and 1,408 net acres; 18 tractor and 6 cable units, 5 of the 6 with feasible corridors and one flagged for a spur road.</p>
-                <p><strong>Limits.</strong> No field verification; wildlife, cultural and soils constraints not modelled. Next: a live web map and a field check of the CHM.</p>
+                <p><strong>Limits.</strong> No field verification; wildlife, cultural and soils constraints not modeled. Next: a live web map and a field check of the CHM.</p>
                 <p><strong>Tools.</strong> PDAL, GDAL, PyQGIS, Python. August to September 2026.</p>
               </div>
               <div class="project-tech">
@@ -102,7 +106,7 @@
                 <p><strong>Data.</strong> Survey123 and Field Maps exports, CSV, JSON and Excel plot files.</p>
                 <p><strong>Method.</strong> Rust command-line and web tool: BAF expansion, TPA, basal area, cubic and board-foot volume, QMD, stand and stock tables, Student's t sampling error, growth projections.</p>
                 <p><strong>Result.</strong> v0.2.0, September 2026: CI-tested installers for Windows, macOS and Linux with checksums. 348 tests.</p>
-                <p><strong>Limits.</strong> Built-in volume equations only; no taper models. MIT licence. 2026.</p>
+                <p><strong>Limits.</strong> Built-in volume equations only; no taper models. MIT license. 2026.</p>
               </div>
               <div class="project-tech">
                 <span class="tech-badge">Rust</span>
@@ -119,8 +123,8 @@
         <!-- RESUME SECTION -->
         <section id="resume">
           <h2>About</h2>
-          <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester (RPF) exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R. At Jefferson Resource Company I deployed ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production and spatial processing with ArcPy and lidR; I still use AI-assisted development tools to build that kind of automation faster. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
-          <p>Timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment were day-to-day work in ArcGIS Pro, ArcPy and R on federal projects; the cruise compiler below is the one piece of that tooling I have published as open source; the harvest-planning workflow itself is rebuilt from scratch on public data in the first project below. All of my California work has been on National Forest land.</p>
+          <p>I am a forester and GIS analyst with more than eight years in the field and an M.S. in Forestry, based in Gold Run in the northern Sierra Nevada and eligible to sit for the California Registered Professional Forester (RPF) exam. My work has run from federal timber sale and community protection projects on the Plumas National Forest to timber sale layout and cruising across seven states, and from chainsaw fuels treatments to LiDAR-derived forest structure and terrain analysis in R. At Jefferson Resource Company I deployed ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production and spatial processing with ArcPy and lidR; I use AI-assisted development tools to build that kind of automation faster. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
+          <p>Timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment were day-to-day work in ArcGIS Pro, ArcPy and R on federal projects; the cruise compiler above is the one piece of that tooling I have published as open source; the harvest-planning workflow itself is rebuilt from scratch on public data in the first project above. All of my California work has been on National Forest land.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF, 2 pages)</a></p>
 
@@ -305,7 +309,7 @@
     <footer>
       <div class="container">
         <p>&copy; 2026 William Steinley. All rights reserved.</p>
-        <p class="footer-sub">Forester &amp; GIS Analyst &middot; Gold Run, California</p>
+        <p class="footer-sub">GIS Forester / Forestry GIS Analyst &middot; Gold Run, California</p>
       </div>
     </footer>
   </body>
