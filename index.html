@@ -19,11 +19,12 @@
       <div class="container">
         <p class="eyebrow">Gold Run, California</p>
         <h1>William Steinley</h1>
-        <p class="tagline">Forester &middot; GIS Analyst &middot; M.S. Forestry</p>
+        <p class="tagline">GIS Forester / Forestry GIS Analyst &middot; M.S. Forestry</p>
         <p class="subtitle">Timber inventory, LiDAR and terrain analysis, ArcGIS and open-source mapping</p>
         <div class="header-actions">
           <a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank">Download resume (PDF)</a>
           <a href="#gis-projects" class="button-secondary">See the projects</a>
+          <a href="https://github.com/woodsy-will" class="button-secondary" target="_blank" rel="noopener">GitHub</a>
           <a href="mailto:wjsteinley@gmail.com" class="button-secondary">Email</a>
         </div>
       </div>
@@ -31,8 +32,8 @@
 
     <nav>
       <div class="container">
-        <a href="#resume">Resume</a>
         <a href="#gis-projects">Projects</a>
+        <a href="#resume">Resume</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
@@ -40,6 +41,81 @@
 
     <main>
       <div class="container">
+        <section id="gis-projects">
+          <h2>GIS Projects</h2>
+          <p>A harvest-planning workflow rebuilt on public data, and the inventory tooling behind my field work, both published as open source.</p>
+
+          <div class="gis-projects-grid">
+            <div class="gis-project-card">
+              <h3>Mohawk Valley West Slope: LiDAR-based harvest-unit planning</h3>
+              <figure class="featured-hero">
+                <a href="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" alt="11x17 unit sheet for cable unit 404: LiDAR hillshade with yarding-class tints, outlined units, hatched stream exclusion zones, skyline corridors from four selected landings, legend and unit attribute table"></a>
+                <figcaption>Cable unit 404, sheet 3 of 25: four landings selected from 53 candidates, 205 of 2,022 corridors feasible with a 50 ft tower. 40 ft contours, 1:12,000, September 2026.</figcaption>
+              </figure>
+              <div class="featured-strip">
+                <figure>
+                  <a href="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" alt="11x17 overview sheet: all 24 demonstration units filled by yarding method over the hillshade, with the unit table of gross and net acres, slope, canopy and skyline screen" loading="lazy"></a>
+                  <figcaption>All 24 units by yarding method with the gross and net acre table, 1:24,000.</figcaption>
+                </figure>
+                <figure>
+                  <a href="projects/plumas-lidar-harvest-planning/yarding_class.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/yarding_class.jpg" alt="Yarding class from planning slope over the LiDAR hillshade with demonstration unit outlines" loading="lazy"></a>
+                  <figcaption>Planning slope classed at 35 and 50 percent over the LiDAR hillshade.</figcaption>
+                </figure>
+                <figure>
+                  <a href="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" alt="Skyline profile sheet for unit 404: ground profile, chord, mid-span deflection and minimum clearance for six settings, the best corridor from each of the four selected landings and two further landings" loading="lazy"></a>
+                  <figcaption>Skyline profiles for unit 404 with chord, deflection, clearance and allowable payload.</figcaption>
+                </figure>
+                <figure>
+                  <a href="projects/plumas-lidar-harvest-planning/equipment_matrix.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/equipment_matrix.jpg" alt="Equipment selection matrix: feasible corridors by horizontal span and chord slope, cable units in blue, tractor units checked as if cable in orange" loading="lazy"></a>
+                  <figcaption>Feasible corridors by span and chord slope against equipment classes.</figcaption>
+                </figure>
+                <figure>
+                  <a href="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" alt="Field data review sheet for unit 101, page 1: stand summary with sampling error, cruise design check against the FSH 2409.12 stratum standard, stand table by DBH class and stock table by species" loading="lazy"></a>
+                  <figcaption>Unit 101 review sheet: sampling error, stand and stock tables, FSH 2409.12 check. Simulated data.</figcaption>
+                </figure>
+              </div>
+              <div class="project-brief">
+                <p><strong>Problem.</strong> Lay out a cable-versus-tractor harvest-unit plan for a 1,816-acre NEPA treatment block on the Plumas National Forest, from raw LiDAR to sale-map sheets.</p>
+                <p><strong>Role.</strong> Solo. Every script, rule and sheet is mine. The workflow mirrors the harvest planning I ran as a Forester III on this forest; that work is confidential, so this runs on an adjacent block I did not work on. Same pipeline, same QA steps, different data.</p>
+                <p><strong>Data.</strong> USGS 3DEP QL1 LiDAR (2018, 650 million points), USFS EDW project areas and roads, NHD, BLM PLSS, Census TIGER.</p>
+                <p><strong>Method.</strong> PDAL and GDAL to 3 ft DTM, CHM and planning slope; rule-based delineation of 24 units; 8,540 skyline corridors from 314 candidate landings screened for deflection, clearance and PNW-39 payload; 25-sheet 11x17 series as print PDF and Avenza GeoPDF from PyQGIS; simulated BAF 20 cruise checked to FSH 2409.12.</p>
+                <p><strong>Result.</strong> 1,621 gross and 1,408 net acres; 18 tractor and 6 cable units, 5 of the 6 with feasible corridors and one flagged for a spur road.</p>
+                <p><strong>Limits.</strong> No field verification; wildlife, cultural and soils constraints not modelled. Next: a live web map and a field check of the CHM.</p>
+                <p><strong>Tools.</strong> PDAL, GDAL, PyQGIS, Python. August to September 2026.</p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">PDAL / GDAL</span>
+                <span class="tech-badge">PyQGIS</span>
+                <span class="tech-badge">LiDAR terrain &amp; canopy</span>
+                <span class="tech-badge">Cable yarding analysis</span>
+                <span class="tech-badge">Sale area maps</span>
+                <span class="tech-badge">Cruise QA</span>
+              </div>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank">Source, previews &amp; map series on GitHub &rarr;</a>
+            </div>
+
+            <div class="gis-project-card">
+              <h3>Forest Inventory Analyzer</h3>
+              <div class="project-brief">
+                <p><strong>Problem.</strong> Compiling cruise data usually means a licensed compiler or a hand-built workbook.</p>
+                <p><strong>Role.</strong> Sole author.</p>
+                <p><strong>Data.</strong> Survey123 and Field Maps exports, CSV, JSON and Excel plot files.</p>
+                <p><strong>Method.</strong> Rust command-line and web tool: BAF expansion, TPA, basal area, cubic and board-foot volume, QMD, stand and stock tables, Student's t sampling error, growth projections.</p>
+                <p><strong>Result.</strong> v0.2.0, September 2026: CI-tested installers for Windows, macOS and Linux with checksums. 348 tests.</p>
+                <p><strong>Limits.</strong> Built-in volume equations only; no taper models. MIT licence. 2026.</p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">Rust</span>
+                <span class="tech-badge">Forest Mensuration</span>
+                <span class="tech-badge">Sampling Statistics</span>
+                <span class="tech-badge">Excel / GeoJSON</span>
+              </div>
+              <a href="https://github.com/woodsy-will/forest-inventory-analyzer-rust" class="gis-link" target="_blank">Source &amp; releases on GitHub &rarr;</a>
+            </div>
+
+          </div>
+        </section>
+
         <!-- RESUME SECTION -->
         <section id="resume">
           <h2>About</h2>
@@ -164,48 +240,6 @@
         </section>
 
         <!-- GIS PROJECTS SECTION -->
-        <section id="gis-projects">
-          <h2>GIS Projects</h2>
-          <p>A harvest-planning workflow rebuilt on public data, and the inventory tooling behind my field work, both published as open source.</p>
-
-          <div class="gis-projects-grid">
-            <div class="gis-project-card">
-              <h3>Mohawk Valley West Slope: LiDAR-based harvest-unit planning</h3>
-              <div class="featured-gallery">
-                <a href="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" alt="11x17 overview sheet: all 24 demonstration units filled by yarding method over the hillshade, with the unit table of gross and net acres, slope, canopy and skyline screen" loading="lazy"></a>
-                <a href="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" alt="11x17 unit sheet for cable unit 404: LiDAR hillshade with yarding-class tints, outlined units, hatched stream exclusion zones, skyline corridors from four selected landings, legend and unit attribute table" loading="lazy"></a>
-                <a href="projects/plumas-lidar-harvest-planning/yarding_class.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/yarding_class.jpg" alt="Yarding class from planning slope over the LiDAR hillshade with demonstration unit outlines" loading="lazy"></a>
-                <a href="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" alt="Skyline profile sheet for unit 404: ground profile, chord, mid-span deflection and minimum clearance for six settings, the best corridor from each of the four selected landings and two further landings" loading="lazy"></a>
-                <a href="projects/plumas-lidar-harvest-planning/equipment_matrix.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/equipment_matrix.jpg" alt="Equipment selection matrix: feasible corridors by horizontal span and chord slope, cable units in blue, tractor units checked as if cable in orange" loading="lazy"></a>
-                <a href="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" target="_blank"><img src="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" alt="Field data review sheet for unit 101, page 1: stand summary with sampling error, cruise design check against the FSH 2409.12 stratum standard, stand table by DBH class and stock table by species" loading="lazy"></a>
-              </div>
-              <p>A self-directed rebuild, on public data only, of the harvest-planning work I did as a Forester III on the Plumas National Forest Community Protection Project. USGS 3DEP LiDAR (650 million points) becomes 3 ft terrain and canopy models; documented rules delineate 24 demonstration units on 1,621 acres; 8,540 skyline corridors are cast from 314 candidate landings on the road points within reach of each unit to screen the cable units for deflection, clearance and equipment class; an 11x17 sale-map-style unit series exports as vector print PDF and GeoPDF for Avenza; and a simulated BAF 20 cruise is checked against the FSH 2409.12 sampling-error standards (40 % per stratum, exhibit 01 for the sale as a whole) and the Region 5 20-plot practice minimum on per-unit review sheets. The client deliverables belong to the contractor and the Forest Service and are not shown; every file here was computed from scratch.</p>
-              <div class="project-tech">
-                <span class="tech-badge">PDAL / GDAL</span>
-                <span class="tech-badge">PyQGIS</span>
-                <span class="tech-badge">LiDAR terrain &amp; canopy</span>
-                <span class="tech-badge">Cable yarding analysis</span>
-                <span class="tech-badge">Sale area maps</span>
-                <span class="tech-badge">Cruise QA</span>
-              </div>
-              <p class="featured-note">Demonstration units delineated by documented rules; not a Forest Service proposal, no field verification. Methods, standards and a data dictionary are in the repository.</p>
-              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank">Source, previews &amp; map series on GitHub &rarr;</a>
-            </div>
-
-            <div class="gis-project-card">
-              <h3>Forest Inventory Analyzer</h3>
-              <p>A command-line and web-UI cruise compiler written in Rust: reads CSV, JSON and Excel plot data and produces trees per acre, basal area, cubic and board-foot volume, QMD, species composition, diameter distributions, sampling statistics with confidence intervals, and growth projections. Cross-platform release workflow with a Windows MSI installer; MIT licensed.</p>
-              <div class="project-tech">
-                <span class="tech-badge">Rust</span>
-                <span class="tech-badge">Forest Mensuration</span>
-                <span class="tech-badge">Sampling Statistics</span>
-                <span class="tech-badge">Excel / GeoJSON</span>
-              </div>
-              <a href="https://github.com/woodsy-will/forest-inventory-analyzer-rust" class="gis-link" target="_blank">Source &amp; releases on GitHub &rarr;</a>
-            </div>
-
-          </div>
-        </section>
 
         <!-- SKILLS SECTION -->
         <section id="skills">
