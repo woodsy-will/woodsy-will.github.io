@@ -216,6 +216,9 @@ nav .container {
 
 nav a {
   padding: 0.5rem 0.85rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 999px;
   color: var(--text);
   font-weight: 600;

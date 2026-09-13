@@ -6,20 +6,22 @@
   <meta name="description" content="Interactive map of the Mohawk Valley West Slope harvest-unit planning demonstration: units, skyline corridors, landings, stream exclusion zones and yarding class from public LiDAR.">
   <meta name="robots" content="index, follow">
   <title>Mohawk Valley West Slope - interactive map</title>
+  <link rel="canonical" href="https://woodsy-will.github.io/projects/plumas-lidar-harvest-planning/map/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232f6b3a'/%3E%3Cpath%20d='M32%2010%20L50%2038%20H40%20L48%2050%20H36%20V56%20H28%20V50%20H16%20L24%2038%20H14%20Z'%20fill='%23eaf3e6'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     :root { --ink: #1c2420; --muted: #5c665a; --accent: #2f6b3a; --panel: #ffffff; --border: #d9e0d8; --tractor: #d55e00; --cable: #0072b2; }
     html, body { height: 100%; margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #eef1ea; }
-    #bar { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; background: var(--panel); border-bottom: 1px solid var(--border); padding: 0.55rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; align-items: baseline; }
+    body { display: flex; flex-direction: column; }
+    #bar { position: relative; flex: none; z-index: 1000; background: var(--panel); border-bottom: 1px solid var(--border); padding: 0.55rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; align-items: baseline; }
     #bar h1 { font-size: 1.05rem; margin: 0; }
     #bar .sub { color: var(--muted); font-size: 0.85rem; }
-    #bar nav a { color: var(--accent); text-decoration: none; margin-right: 0.9rem; font-size: 0.9rem; }
+    #bar nav a { color: var(--accent); text-decoration: none; display: inline-block; padding: 0.55rem 0.6rem 0.55rem 0; margin-right: 0.5rem; font-size: 0.95rem; }
     #bar nav a:hover { text-decoration: underline; }
-    #map { position: absolute; top: 58px; bottom: 0; left: 0; right: 0; }
-    @media (max-width: 640px) { #map { top: 84px; } }
+    #map { position: relative; flex: 1 1 auto; min-height: 0; }
     .legend { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 0.55rem 0.7rem; font-size: 0.8rem; line-height: 1.5; max-width: 240px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
-    .legend h3 { margin: 0 0 0.25rem; font-size: 0.85rem; }
+    .legend summary { cursor: pointer; font-weight: 600; font-size: 0.85rem; margin: 0 0 0.25rem; }
     .legend .row { display: flex; align-items: center; gap: 0.45rem; }
     .legend .sw { width: 22px; height: 12px; flex: none; border-radius: 2px; box-sizing: border-box; }
     .legend .ln { width: 22px; height: 0; flex: none; }
@@ -125,8 +127,9 @@
 
     const legend = L.control({ position: 'bottomleft' });
     legend.onAdd = () => {
-      const d = L.DomUtil.create('div', 'legend');
-      d.innerHTML = `<h3>Legend</h3>
+      const d = L.DomUtil.create('details', 'legend');
+      d.open = window.innerWidth > 700;
+      d.innerHTML = `<summary>Legend</summary>
         <div class="row"><span class="sw" style="border:2.5px solid var(--tractor)"></span>Tractor unit</div>
         <div class="row"><span class="sw" style="border:2.5px solid var(--cable)"></span>Cable unit</div>
         <div class="row"><span class="ln" style="border-top:2.5px dashed #111"></span>Treatment block</div>
@@ -135,6 +138,8 @@
         <div class="row"><span class="ln" style="border-top:2px solid #0070c0"></span>Stream (NHD)</div>
         <div class="row"><span class="ln" style="border-top:1px solid #222"></span>Feasible skyline corridor</div>
         <div class="row"><span class="sw" style="background:#ffd400;border:1px solid #333;width:12px;height:12px;border-radius:50%"></span>Landing with feasible corridors</div>
+        <div class="row"><span class="sw" style="background:#bbb;border:1px solid #333;width:10px;height:10px;border-radius:50%"></span>Landing, no feasible corridor</div>
+        <div class="row"><span class="sw" style="background:#fff;border:1px solid #444;width:10px;height:10px;border-radius:50%"></span>Cruise plot, simulated (red when flagged)</div>
         <div class="row"><span class="sw" style="background:rgb(166,206,189)"></span>Ground-based, slope 35 % and under</div>
         <div class="row"><span class="sw" style="background:rgb(240,228,150)"></span>Marginal, 35 to 50 %</div>
         <div class="row"><span class="sw" style="background:rgb(241,176,140)"></span>Cable, over 50 %</div>
