@@ -35,7 +35,7 @@
 <body>
   <div id="bar">
     <h1>Mohawk Valley West Slope: harvest-unit planning</h1>
-    <span class="sub">Demonstration from public data (USGS 3DEP LiDAR 2018, USFS EDW, NHD, BLM, Census). Not a Forest Service proposal; cruise plots are simulated.</span>
+    <span class="sub">Demo block from public data: USGS 3DEP LiDAR 2018, USFS EDW, NHD, BLM, Census. Not a Forest Service proposal. Cruise plots are simulated.</span>
     <nav>
       <a href="../../../index.html#gis-projects">Portfolio</a>
       <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" target="_blank" rel="noopener">Repository</a>
@@ -79,9 +79,9 @@
 
     add('Treatment block (USFS EDW)', 'block.geojson', { style: { color: '#111', weight: 2.5, dashArray: '8 5', fill: false } }, true);
     add('Riparian conservation areas', 'rca.geojson', { style: { color: '#7fb3d5', weight: 0.6, fillColor: '#bcd7ea', fillOpacity: 0.35 },
-      onEachFeature: (f, l) => l.bindPopup(`<h4>Riparian conservation area</h4>${row('Stream class', f.properties.class)}${row('Width', fmt(f.properties.width_ft) + ' ft each side')}<p>SNFPA widths; mapped for context, not an exclusion.</p>`) }, false);
+      onEachFeature: (f, l) => l.bindPopup(`<h4>Riparian conservation area</h4>${row('Stream class', f.properties.class)}${row('Width', fmt(f.properties.width_ft) + ' ft each side')}<p>SNFPA widths, shown for context. Not an exclusion zone.</p>`) }, false);
     add('Stream equipment exclusion zones', 'eez.geojson', { style: { color: '#2e6da4', weight: 0.8, fillColor: '#5da2d8', fillOpacity: 0.45 },
-      onEachFeature: (f, l) => l.bindPopup(`<h4>Equipment exclusion zone</h4>${row('Stream class', f.properties.class)}${row('Width', fmt(f.properties.width_ft) + ' ft each side')}<p>Netted out of the unit acres.</p>`) }, true);
+      onEachFeature: (f, l) => l.bindPopup(`<h4>Equipment exclusion zone</h4>${row('Stream class', f.properties.class)}${row('Width', fmt(f.properties.width_ft) + ' ft each side')}<p>Netted out of unit acres.</p>`) }, true);
     add('Streams (NHD)', 'streams.geojson', { style: f => ({ color: '#0070c0', weight: f.properties.class === 'perennial' ? 2.2 : 1.3, dashArray: f.properties.class === 'intermittent' ? '6 4' : (f.properties.class === 'ephemeral' ? '2 4' : null) }),
       onEachFeature: (f, l) => l.bindPopup(`<h4>${f.properties.name || 'Unnamed stream'}</h4>${row('Class', f.properties.class)}`) }, true);
     add('Contours, 200 ft', 'contours200.geojson', { style: { color: '#96502d', weight: 0.9, opacity: 0.8 }, onEachFeature: (f, l) => l.bindTooltip(fmt(f.properties.elev) + ' ft', { sticky: true }) }, false);
@@ -90,7 +90,7 @@
     add('Candidate landings', 'landings.geojson', { pointToLayer: (f, ll) => L.circleMarker(ll, { radius: f.properties.corridors_ok > 0 ? 4.5 : 3, color: '#333', weight: 1, fillColor: f.properties.corridors_ok > 0 ? '#ffd400' : '#bbb', fillOpacity: 0.95 }),
       onEachFeature: (f, l) => l.bindPopup(`<h4>Landing ${f.properties.landing_id}, unit ${f.properties.unit_id}</h4><table>${row('Elevation', fmt(f.properties.elev) + ' ft')}${row('Feasible corridors', fmt(f.properties.corridors_ok))}${row('Unit coverage', fmt(f.properties.coverage_pct) + ' %')}</table>`) }, false);
     add('Cruise plots (simulated)', 'plots.geojson', { pointToLayer: (f, ll) => L.circleMarker(ll, { radius: 3, color: '#444', weight: 0.8, fillColor: f.properties.flags ? '#e63946' : '#ffffff', fillOpacity: 0.95 }),
-      onEachFeature: (f, l) => l.bindPopup(`<h4>Plot ${f.properties.plot}, unit ${f.properties.unit_id}</h4><table>${row('Trees tallied', fmt(f.properties.n_trees))}${row('Slope', fmt(f.properties.slope) + ' %')}${row('QA flags', f.properties.flags || 'none')}</table><p>Simulated BAF 20 cruise; no crew measured these trees.</p>`) }, false);
+      onEachFeature: (f, l) => l.bindPopup(`<h4>Plot ${f.properties.plot}, unit ${f.properties.unit_id}</h4><table>${row('Trees tallied', fmt(f.properties.n_trees))}${row('Slope', fmt(f.properties.slope) + ' %')}${row('QA flags', f.properties.flags || 'none')}</table><p>Simulated BAF 20 cruise. No crew measured these trees.</p>`) }, false);
 
     let selected = null;
     const unitStyle = f => ({ color: methodColor(f.properties.method), weight: 2.6, fillColor: methodColor(f.properties.method), fillOpacity: 0.06 });
@@ -138,7 +138,7 @@
         <div class="row"><span class="sw" style="background:rgb(166,206,189)"></span>Ground-based, slope 35 % and under</div>
         <div class="row"><span class="sw" style="background:rgb(240,228,150)"></span>Marginal, 35 to 50 %</div>
         <div class="row"><span class="sw" style="background:rgb(241,176,140)"></span>Cable, over 50 %</div>
-        <div class="note">Click a unit for its attributes and skyline screen. Corridors, landings, contours and plots are in the layer list. CA State Plane data shown in Web Mercator.</div>`;
+        <div class="note">Click a unit for its attributes and skyline screen. Corridors, landings, contours and plots are in the layer list. Data in CA State Plane, shown in Web Mercator.</div>`;
       L.DomEvent.disableClickPropagation(d); return d;
     };
     legend.addTo(map);
