@@ -10,7 +10,7 @@
     <meta property="og:image:width" content="1870">
     <meta property="og:image:height" content="1210">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:description" content="Timber inventory, LiDAR and terrain analysis, harvest-unit mapping and post-fire assessment. Portfolio and resume.">
+    <meta property="og:description" content="Timber inventory, LiDAR and terrain analysis, harvest-unit mapping and cruise compilation. Portfolio and resume.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://woodsy-will.github.io/">
     <link rel="canonical" href="https://woodsy-will.github.io/">
@@ -128,7 +128,7 @@
         <section id="resume">
           <h2 id="about">About</h2>
           <p>I am a forester and GIS analyst based in Gold Run, in the northern Sierra Nevada, with more than eight years in the field, an M.S. in Forestry, and eligibility to sit for the California Registered Professional Forester (RPF) exam. The field work has covered federal timber sale and community protection projects on the Plumas National Forest, timber sale layout and cruising across seven states, chainsaw fuels treatments, and LiDAR forest structure and terrain analysis in R. At Jefferson Resource Company I set up ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production with ArcPy and lidR. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
-          <p>Timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment were the day-to-day work on federal projects, in ArcGIS Pro, ArcPy and R. The cruise compiler above is my own open-source tool, written on my own time. The harvest-planning workflow is rebuilt from scratch on public data in the first project above. All of my California timber sale work has been on National Forest land.</p>
+          <p>Timber sale and harvest-unit mapping, inventory analysis and LiDAR stand structure were the day-to-day work on federal projects, in ArcGIS Pro, ArcPy and R. The cruise compiler above is my own open-source tool, written on my own time. The harvest-planning workflow is rebuilt from scratch on public data in the first project above. All of my California timber sale work has been on National Forest land.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank" rel="noopener">Download resume (PDF, 2 pages)</a></p>
 
@@ -138,45 +138,38 @@
 
               <div class="experience-item">
                 <div class="position">Principal / Consulting Forester</div>
-                <div class="company">Athena Resource Group &middot; Gold Run, CA (field projects in Texas) &middot; part-time consulting practice</div>
+                <div class="company">Athena Resource Group &middot; Gold Run, CA</div>
                 <ul class="resume-bullets">
-                  <li>Write land management plans for private landowners, translating owner objectives into written prescriptions and treatment schedules.</li>
+                  <li>Write land management plans for private landowners. Each plan turns owner objectives into a written prescription and a treatment schedule. Part-time consulting practice with field projects in Texas.</li>
                   <li>Perform the prescribed treatments personally: chainsaw and hand thinning, brush and invasive species control.</li>
-                  <li>Run business operations for the two-person firm: client acquisition, project scoping and invoicing.</li>
+                  <li>Run business operations for the two-person firm: client acquisition, project scoping, and invoicing.</li>
                 </ul>
                 <div class="date">Mar 2026 &ndash; Present</div>
               </div>
 
               <div class="experience-item">
                 <div class="position">Forester III</div>
-                <div class="company">Jefferson Resource Company &middot; Placerville, CA</div>
+                <div class="company">Jefferson Resource Company (JRC) &middot; Placerville, CA</div>
                 <ul class="resume-bullets">
-                  <li>Supervised field crews of up to four across ~8,000 acres of the Plumas National Forest Community Protection Project, overseeing and analyzing 500+ plots and catching layout, marking and survey errors before they reached U.S. Forest Service (USFS) deliverables; implemented National Environmental Policy Act (NEPA) requirements and silvicultural prescriptions in the field, including unit layout for helicopter yarding.</li>
-                  <li>Led the transition from Avenza Maps Pro to ArcGIS Online, ArcGIS Pro, Field Maps and Survey123, authoring two technical guides and the training materials that drove adoption; eliminated manual re-keying of field data.</li>
-                  <li>Automated cartographic production and spatial data processing in Python and ArcPy; generated canopy height and digital terrain models (CHM, DTM) from LiDAR in R (lidR), with slope and terrain derivatives informing yarding system selection and harvest unit delineation.</li>
-                  <li>Developed R and lidR routines for individual tree crown delineation and canopy cover estimation as an open-source alternative to licensed processing software.</li>
-                  <li>Published and maintained 40+ hosted feature layers and geodatabases and managed offline map areas across three project areas for stream, inventory plot, archaeological and forest health surveys.</li>
-                  <li>Field liaison between JRC, USFS timber staff and National Forest Foundation partners; supported contract administration and best management practice compliance under a Registered Professional Forester.</li>
+                  <li>Supervised field crews of up to four personnel across ~8,000 acres on the Plumas National Forest Community Protection Project. Reviewed 500+ plots and caught layout, marking, and survey errors before U.S. Forest Service (USFS) deliverables went out.</li>
+                  <li>Applied National Environmental Policy Act (NEPA) requirements and silvicultural prescriptions in the field, including unit layout for helicopter yarding.</li>
+                  <li>Led the move from Avenza Maps Pro to ArcGIS Online, ArcGIS Pro, Esri Field Maps, and Survey123. Wrote two technical guides and the training materials that brought the crews over. Ended manual re-keying of field data and gave crews real-time cloud access.</li>
+                  <li>Automated map production and spatial data processing in Python and ArcPy, replacing hand-assembled maps with one standard output across deliverables. Validated every output against manual quality-control checks.</li>
+                  <li>Built CHM and DTM products from LiDAR point clouds in R (lidR). Checked point density and compared resampling approaches before setting the grid resolution. Produced slope and terrain derivatives used to pick yarding systems and delineate harvest units.</li>
+                  <li>Wrote R and lidR routines for individual tree crown delineation and canopy cover estimation, an open-source alternative to licensed processing software.</li>
+                  <li>Published and maintained 40+ hosted feature layers and geodatabases and managed offline map areas across three project areas. Crews used them to collect stream, inventory plot, archaeological, and forest disease and dieback data for timber sale planning, layout, and resource surveys.</li>
+                  <li>Field liaison between JRC, USFS timber staff, and National Forest Foundation partners. Supported contract administration and USFS best management practice compliance under a Registered Professional Forester.</li>
                 </ul>
                 <div class="date">Feb 2024 &ndash; Mar 2026</div>
               </div>
 
               <div class="experience-item">
-                <div class="position">M.S. Thesis Completion &amp; Relocation</div>
-                <div class="company">Stephen F. Austin State University &middot; relocated to California</div>
-                <ul class="resume-bullets">
-                  <li>Completed M.S. thesis research and writing on fire return interval effects in East Texas upland pine ecosystems; relocated to California and secured forestry employment in-state.</li>
-                </ul>
-                <div class="date">Jul 2023 &ndash; Feb 2024</div>
-              </div>
-
-              <div class="experience-item">
                 <div class="position">Forester</div>
-                <div class="company">Sunrise Pines Forestry &middot; CA, MT, AZ, OK, LA, AR, TX</div>
+                <div class="company">Sunrise Pines Forestry &middot; California and six other states</div>
                 <ul class="resume-bullets">
-                  <li>Laid out timber sales across seven states, from Rocky Mountain mixed conifer to Gulf Coastal Plain pine, with ground-based systems throughout and cable systems on steep terrain in California and Montana.</li>
-                  <li>Cruised timber by fixed-plot, variable-radius, strip and 100% methods, including 250+ plots personally run in eastern Oklahoma; compiled cruise data into volume summaries for appraisals, management plans and harvest scheduling.</li>
-                  <li>Marked timber to silvicultural prescriptions from ponderosa pine and mixed conifer to bottomland hardwood and shortleaf pine; coordinated with landowners, consulting foresters and logging contractors.</li>
+                  <li>Laid out timber sales in seven states, from Rocky Mountain mixed conifer to Gulf Coastal Plain pine. Ground-based systems throughout, cable systems on steep ground in California and Montana.</li>
+                  <li>Cruised timber by fixed-plot, variable-radius, strip, and 100% methods on varied forest types and ownerships, and ran 250+ plots myself in eastern Oklahoma. Compiled the cruise data into volume summaries for appraisals, management plans, and harvest scheduling.</li>
+                  <li>Marked timber to silvicultural prescriptions in stands from ponderosa pine and mixed conifer to bottomland hardwood and shortleaf pine. Worked out implementation with landowners, consulting foresters, and logging contractors.</li>
                 </ul>
                 <div class="date">Apr 2022 &ndash; Jul 2023</div>
               </div>
@@ -185,7 +178,8 @@
                 <div class="position">Fuels Technician</div>
                 <div class="company">Fire Safe Council of Nevada County &middot; Grass Valley, CA</div>
                 <ul class="resume-bullets">
-                  <li>Implemented fuel reduction prescriptions under an RPF with chainsaws, tow-chippers, tracked masticators and hand tools; built control lines to burn plan specifications and worked prescribed fire ignition, holding and mop-up.</li>
+                  <li>Carried out fuel reduction prescriptions under a Registered Professional Forester. Ran mechanical treatments with chainsaws, tow-chippers, tracked masticators, and hand tools for community wildfire protection. Three-month position, then moved up to the forester role at Sunrise Pines.</li>
+                  <li>Constructed control lines to burn plan specifications and worked prescribed fire ignition, holding, and mop-up operations.</li>
                 </ul>
                 <div class="date">Jan 2022 &ndash; Apr 2022</div>
               </div>
@@ -194,8 +188,8 @@
                 <div class="position">Graduate Teaching Assistant</div>
                 <div class="company">Stephen F. Austin State University &middot; Nacogdoches, TX</div>
                 <ul class="resume-bullets">
-                  <li>Instructed lab sections of 30&ndash;50 undergraduates per semester in Introduction to Forestry and Forest Biometrics: mensuration, sampling design and spatial analysis, with field trips.</li>
-                  <li>Assisted faculty during the six-week summer field station, staging equipment and tracking accountability for 100+ students in timber cruising, silviculture and management planning exercises.</li>
+                  <li>Taught lab sections of 30&ndash;50 undergraduate students per semester in Introduction to Forestry and Forest Biometrics. Led field trips and taught mensuration, sampling design, and spatial analysis.</li>
+                  <li>Assisted faculty at the six-week summer field station program. Hauled and staged field equipment and kept accountability for 100+ students through exercises in timber cruising, silviculture, and forest management planning.</li>
                 </ul>
                 <div class="date">Aug 2019 &ndash; Jan 2022</div>
               </div>
@@ -204,7 +198,8 @@
                 <div class="position">Fuels Technician</div>
                 <div class="company">TimberPro Forest Service &middot; Nacogdoches, TX</div>
                 <ul class="resume-bullets">
-                  <li>Operated a D5 bulldozer to construct control lines and suppress slopovers and spot fires during prescribed burns across East Texas pine plantations; drip-torch ignition, ATV line inspection and hand-tool suppression across multiple burn units.</li>
+                  <li>Operated D5 bulldozer to construct control lines and suppress slopovers and spot fires during prescribed burn operations across East Texas pine plantations.</li>
+                  <li>Ignited prescribed burns with drip torches and inspected control lines by ATV. Suppressed spot fires with hand tools across multiple burn units.</li>
                 </ul>
                 <div class="date">Nov 2017 &ndash; May 2019</div>
               </div>
@@ -216,7 +211,7 @@
               <div class="education-item">
                 <div class="degree">Master of Science in Forestry</div>
                 <div class="institution">Stephen F. Austin State University</div>
-                <p class="resume-note">Thesis: <a href="https://scholarworks.sfasu.edu/etds/548/" target="_blank" rel="noopener"><em>Consequences of Altered Burn Regimes on Plant Community Diversity in the Pineywoods of East Texas</em></a> (SFA ScholarWorks, full text). Committee: Oswald, Kidd, Glasscock. Xi Sigma Pi Forestry Honor Society.</p>
+                <p class="resume-note">Thesis: <a href="https://scholarworks.sfasu.edu/etds/548/" target="_blank" rel="noopener"><em>Consequences of Altered Burn Regimes on Plant Community Diversity in the Pineywoods of East Texas</em></a> (SFA ScholarWorks, full text). Committee: Oswald, Kidd, Glasscock. Xi Sigma Pi Forestry Honor Society. Thesis research and writing: Jul 2023 &ndash; Feb 2024.</p>
                 <div class="date">2024</div>
               </div>
 
@@ -273,10 +268,10 @@
                 <li><strong>ArcGIS Pro, ArcGIS Online, Field Maps, Survey123</strong> &mdash; led JRC's move off Avenza Maps; published and maintained 40+ hosted feature layers, managed offline map areas across three project areas, wrote two technical guides and the crew training.</li>
                 <li><strong>LiDAR processing</strong> &mdash; canopy height and terrain models (CHM, DTM) in R (lidR) at JRC on Plumas National Forest projects, with tree crown delineation and canopy cover estimation from the point clouds.</li>
                 <li><strong>Slope and terrain modeling</strong> &mdash; terrain derivatives that informed yarding system selection and harvest unit delineation at JRC.</li>
-                <li><strong>Cartographic production</strong> &mdash; automated map assembly in ArcPy at JRC for sale layout, inventory and post-fire deliverables.</li>
+                <li><strong>Cartographic production</strong> &mdash; automated map assembly in ArcPy at JRC for sale layout and inventory deliverables.</li>
                 <li><strong>QGIS, GDAL, PDAL</strong> &mdash; open-source toolchain used alongside ArcGIS Pro for terrain processing and map production.</li>
                 <li><strong>Geodatabases and coordinate systems</strong> &mdash; project geodatabases and offline areas at JRC; coordinate reference system management across sale layout in seven states.</li>
-                <li><strong>Web mapping and imagery</strong> &mdash; ArcGIS Online web maps and hosted layers at JRC; post-fire assessment in ArcGIS Pro on federal projects.</li>
+                <li><strong>Web mapping and cloud GIS</strong> &mdash; ArcGIS Online web maps, hosted layers and offline map areas at JRC.</li>
               </ul>
             </div>
 
@@ -284,7 +279,7 @@
               <h3>Programming &amp; Data</h3>
               <ul class="skill-list">
                 <li><strong>R (lidR, terra, sf, tidyverse)</strong> &mdash; individual tree crown delineation and canopy cover routines at JRC as an open-source alternative to licensed software; thesis analysis.</li>
-                <li><strong>Python (ArcPy, pandas, GeoPandas, GDAL, NumPy)</strong> &mdash; cartographic and spatial-processing automation at JRC.</li>
+                <li><strong>Python (ArcPy, pandas, GeoPandas, rasterio)</strong> &mdash; cartographic and spatial-processing automation at JRC.</li>
 <li><strong>Statistical analysis</strong> &mdash; sampling statistics and confidence intervals in the Forest Inventory Analyzer; plots-needed checks against FSH 2409.12 in the Mohawk Valley review sheets; plant diversity analysis for the thesis in R.</li>
                 <li><strong>Excel</strong> &mdash; cruise compilation and inventory workbooks at JRC and in consulting.</li>
                 <li><strong>Rust</strong> &mdash; the Forest Inventory Analyzer, a cruise compiler with a web UI and CI builds.</li>
