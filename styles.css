@@ -90,6 +90,15 @@ a:hover { color: var(--accent-strong); }
 
 img { max-width: 100%; height: auto; display: block; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .container {
   width: min(100% - 2 * var(--space), var(--wrap));
   margin-inline: auto;
@@ -100,7 +109,7 @@ img { max-width: 100%; height: auto; display: block; }
    -------------------------------------------------------------------------- */
 
 header {
-  padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3.5rem);
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(1.5rem, 3vw, 2rem);
   background:
     radial-gradient(60rem 30rem at 15% -20%, var(--accent-soft), transparent 60%),
     var(--bg);
@@ -235,7 +244,7 @@ nav a:hover {
    Sections
    -------------------------------------------------------------------------- */
 
-main { padding-block: clamp(2rem, 5vw, 3.5rem); }
+main { padding-block: 1.5rem clamp(2rem, 5vw, 3.5rem); }
 
 section {
   background: var(--surface);
@@ -371,7 +380,7 @@ section > h2 + p { color: var(--muted); }
 }
 .featured-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 0.6rem;
   margin-bottom: 0.9rem;
 }
@@ -574,7 +583,9 @@ footer p { margin: 0 0 0.25rem; }
       "bullets";
   }
   .experience-item .date { margin: 0.2rem 0 0.25rem; }
-  nav a { padding: 0.45rem 0.7rem; font-size: 0.9rem; }
+  nav .container { gap: 0.15rem 0.25rem; }
+  nav a { padding: 0.45rem 0.5rem; font-size: 0.875rem; }
+  .featured-strip img { aspect-ratio: auto; }
 }
 
 /* --------------------------------------------------------------------------
