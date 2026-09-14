@@ -371,14 +371,15 @@ section > h2 + p { color: var(--muted); }
 }
 .featured-strip {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.6rem;
   margin-bottom: 0.9rem;
 }
 .featured-strip figure { margin: 0; }
 .featured-strip img {
   width: 100%;
-  height: 170px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   display: block;
   border: 1px solid var(--border);
@@ -387,7 +388,7 @@ section > h2 + p { color: var(--muted); }
 }
 .featured-hero figcaption,
 .featured-strip figcaption {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-top: 0.3rem;
   line-height: 1.35;
@@ -553,7 +554,6 @@ footer {
 }
 
 footer p { margin: 0 0 0.25rem; }
-.footer-sub { opacity: 0.85; }
 
 /* --------------------------------------------------------------------------
    Responsive
@@ -574,7 +574,6 @@ footer p { margin: 0 0 0.25rem; }
       "bullets";
   }
   .experience-item .date { margin: 0.2rem 0 0.25rem; }
-  .featured-strip { grid-template-columns: 1fr 1fr; }
   nav a { padding: 0.45rem 0.7rem; font-size: 0.9rem; }
 }
 

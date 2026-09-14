@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="William Steinley, GIS forester in Gold Run, California: timber inventory, LiDAR terrain and canopy analysis, harvest-unit mapping and cruise compilation. Portfolio and resume.">
+    <meta name="description" content="William Steinley, GIS forester in Gold Run, California: timber inventory, LiDAR terrain and canopy analysis, harvest-unit mapping and cruise compilation.">
     <meta name="theme-color" content="#2f6b3a">
     <meta property="og:title" content="William Steinley - GIS Forester / Forestry GIS Analyst">
     <meta property="og:image" content="https://woodsy-will.github.io/projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg">
@@ -15,6 +15,8 @@
     <meta property="og:url" content="https://woodsy-will.github.io/">
     <link rel="canonical" href="https://woodsy-will.github.io/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232f6b3a'/%3E%3Cpath%20d='M32%2010%20L50%2038%20H40%20L48%2050%20H36%20V56%20H28%20V50%20H16%20L24%2038%20H14%20Z'%20fill='%23eaf3e6'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <title>William Steinley - GIS Forester</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -37,6 +39,7 @@
     <nav>
       <div class="container">
         <a href="#gis-projects">Projects</a>
+        <a href="#about">About</a>
         <a href="#resume">Resume</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -54,7 +57,7 @@
               <h3>Mohawk Valley West Slope: LiDAR-based harvest-unit planning</h3>
               <figure class="featured-hero">
                 <a href="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_404_sheet.jpg" width="1870" height="1210" alt="Unit sheet, cable unit 404, 11x17: LiDAR hillshade with yarding-class tint, unit outlines, hatched stream exclusion zones, skyline corridors from four selected landings, legend and unit attribute table"></a>
-                <figcaption>Cable unit 404, sheet 23 of 25: 4 of 53 candidate landings selected, 205 of 2,022 corridors feasible with a 50 ft tower. 40 ft contours, 1:12,000, September 2026.</figcaption>
+                <figcaption>Cable unit 404, sheet 23 of 25: 4 of 53 candidate landings selected, 205 of 2,022 corridors feasible with a 50 ft tower. 40 ft contours, 1:12,000, September 2026. Demonstration data.</figcaption>
               </figure>
               <div class="featured-strip">
                 <figure>
@@ -67,11 +70,11 @@
                 </figure>
                 <figure>
                   <a href="projects/plumas-lidar-harvest-planning/unit_404_profiles.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_404_profiles_thumb.jpg" width="204" height="340" alt="Skyline profile sheet, unit 404: ground profile, chord, mid-span deflection and minimum clearance for six settings; best corridor from each of the four selected landings and two further landings" loading="lazy"></a>
-                  <figcaption>Unit 404 skyline profiles: chord, deflection, clearance and allowable payload.</figcaption>
+                  <figcaption>Unit 404 skyline profiles: chord, deflection, clearance and allowable payload. Demonstration data.</figcaption>
                 </figure>
                 <figure>
                   <a href="projects/plumas-lidar-harvest-planning/equipment_matrix.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/equipment_matrix_thumb.jpg" width="370" height="222" alt="Equipment selection matrix: feasible corridors by horizontal span and chord slope; cable units in blue, tractor units checked as if cable in orange" loading="lazy"></a>
-                  <figcaption>Feasible corridors by span and chord slope against equipment classes.</figcaption>
+                  <figcaption>Feasible corridors by span and chord slope against equipment classes. Demonstration data.</figcaption>
                 </figure>
                 <figure>
                   <a href="projects/plumas-lidar-harvest-planning/unit_101_review.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/unit_101_review_thumb.jpg" width="263" height="340" alt="Field data review sheet, unit 101, page 1: stand summary with sampling error, cruise design check against the FSH 2409.12 stratum standard, stand table by DBH class, stock table by species" loading="lazy"></a>
@@ -85,7 +88,6 @@
                 <p><strong>Method.</strong> PDAL and GDAL took the point cloud to a 3 ft DTM, CHM and planning slope. I delineated 24 units by rule, then screened 8,540 skyline corridors from 314 candidate landings for deflection, clearance and PNW-39 payload. The 25-sheet 11x17 series came out of PyQGIS as print PDF and Avenza GeoPDF. A simulated BAF 20 cruise was checked to FSH 2409.12.</p>
                 <p><strong>Result.</strong> 1,621 gross and 1,408 net acres. 18 tractor units and 6 cable; 5 of the 6 cable units have feasible corridors and one is flagged for a spur road.</p>
                 <p><strong>Limits.</strong> No field verification. Wildlife, cultural and soils constraints are not modeled. Next is a field check of the CHM.</p>
-                <p><strong>Tools.</strong> PDAL, GDAL, PyQGIS and Python. September 2026.</p>
               </div>
               <p><a href="projects/plumas-lidar-harvest-planning/map/" class="button-primary" target="_blank" rel="noopener">Open the interactive map</a></p>
               <div class="project-tech">
@@ -97,7 +99,8 @@
                 <span class="tech-badge">Sale area maps</span>
                 <span class="tech-badge">Cruise QA</span>
               </div>
-              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank" rel="noopener">Source, previews &amp; map series on GitHub &rarr;</a>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank" rel="noopener">Source &amp; previews on GitHub &rarr;</a>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning/releases/tag/v1.1" class="gis-link" target="_blank" rel="noopener">Map series, GeoPDFs and rasters on the v1.1 release (100 to 190 MB each) &rarr;</a>
             </div>
 
             <div class="gis-project-card">
@@ -123,8 +126,8 @@
 
         <!-- RESUME SECTION -->
         <section id="resume">
-          <h2>About</h2>
-          <p>I am a forester and GIS analyst based in Gold Run, in the northern Sierra Nevada. I have more than eight years in the field and an M.S. in Forestry, and I am eligible to sit for the California Registered Professional Forester (RPF) exam. The field work has covered federal timber sale and community protection projects on the Plumas National Forest, timber sale layout and cruising across seven states, chainsaw fuels treatments, and LiDAR forest structure and terrain analysis in R. At Jefferson Resource Company I set up ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production and spatial processing with ArcPy and lidR. AI-assisted development tools let me build that automation faster. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper, and I am lead author on it.</p>
+          <h2 id="about">About</h2>
+          <p>I am a forester and GIS analyst based in Gold Run, in the northern Sierra Nevada, with more than eight years in the field, an M.S. in Forestry, and eligibility to sit for the California Registered Professional Forester (RPF) exam. The field work has covered federal timber sale and community protection projects on the Plumas National Forest, timber sale layout and cruising across seven states, chainsaw fuels treatments, and LiDAR forest structure and terrain analysis in R. At Jefferson Resource Company I set up ArcGIS Pro, Field Maps and Survey123 for field data collection and automated map production with ArcPy and lidR. My M.S. thesis on fire return intervals in the East Texas Pineywoods is the basis of a published fire ecology paper on which I am lead author.</p>
           <p>Timber sale and harvest-unit mapping, inventory analysis, LiDAR stand structure and post-fire assessment were the day-to-day work on federal projects, in ArcGIS Pro, ArcPy and R. The cruise compiler above is my own open-source tool, written on my own time. The harvest-planning workflow is rebuilt from scratch on public data in the first project above. All of my California timber sale work has been on National Forest land.</p>
           <h2>Professional Resume</h2>
           <p><a href="projects/resume/William_Steinley_Resume.pdf" class="button-primary" target="_blank" rel="noopener">Download resume (PDF, 2 pages)</a></p>
