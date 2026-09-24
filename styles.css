@@ -90,6 +90,26 @@ a:hover { color: var(--accent-strong); }
 
 img { max-width: 100%; height: auto; display: block; }
 
+/* Keyboard users land here first and can jump the nav (WCAG 2.4.1).
+   Off-screen until focused, rather than display:none, so it stays focusable. */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.65rem 1.15rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+main:focus {
+  outline: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -200,6 +220,8 @@ header .subtitle {
 @media (prefers-color-scheme: dark) {
   .button-primary { color: #0f1a12; }
   .button-primary:hover { color: #0f1a12; }
+  /* --accent lightens in dark mode, so white here would drop to about 2:1 */
+  .skip-link { color: #0f1a12; }
 }
 
 /* --------------------------------------------------------------------------
