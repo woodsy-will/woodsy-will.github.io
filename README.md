@@ -1,10 +1,10 @@
 # William Steinley - Portfolio site
 
-Source for https://woodsy-will.github.io/, a portfolio and resume for GIS forester and forestry GIS analyst roles: one main page plus an interactive Leaflet map.
+Source for https://woodsy-will.github.io/, a portfolio and resume for forester and GIS analyst roles: one main page plus an interactive Leaflet map.
 
 ## What is on the main page
 
-- **Header**: Gold Run, California; "GIS Forester / Forestry GIS Analyst · M.S. Forestry"; links to the resume PDF, the projects section, GitHub and email.
+- **Header**: Gold Run, California; "Forester / GIS Analyst · M.S. Forestry"; links to the resume PDF, the projects section, GitHub and email.
 - **Projects**: two cards, each written as problem, data, method, result and limits.
   - *Mohawk Valley West Slope: LiDAR-based harvest-unit planning* - a demonstration on public data: LiDAR terrain and canopy products, 24 demonstration units, a skyline corridor screen, an 11x17 unit map series and simulated-cruise review sheets. A hero image and five thumbnails link to full-size JPEGs; a button opens the interactive map; the source and deliverables are at [plumas-lidar-harvest-planning](https://github.com/woodsy-will/plumas-lidar-harvest-planning) and its release.
   - *Forest Inventory Analyzer* - a Rust command-line and web cruise compiler, at [forest-inventory-analyzer-rust](https://github.com/woodsy-will/forest-inventory-analyzer-rust) with a Windows installer and macOS and Linux binaries on its v0.2.0 release.
