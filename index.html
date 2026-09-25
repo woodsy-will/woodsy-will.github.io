@@ -83,11 +83,11 @@
               </figure>
               <div class="featured-strip">
                 <figure>
-                  <a href="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/overview_sheet_thumb.jpg" width="370" height="239" alt="Overview sheet, 11x17: all 24 demonstration units filled by yarding method over the hillshade, with the unit table of gross and net acres, slope, canopy and skyline screen" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
-                  <figcaption>All 24 units by yarding method with the gross and net acre table, 1:24,000.</figcaption>
+                  <a href="projects/plumas-lidar-harvest-planning/overview_sheet.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/overview_sheet_thumb.jpg" width="370" height="239" alt="Overview sheet, 11x17: all 24 demonstration units filled by yarding system over the hillshade, each unit outlined in white and numbered in a circle, cable units hatched, with the unit table of gross and net acres, slope, canopy and skyline screen" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
+                  <figcaption>All 24 units by yarding system, numbered and outlined so neighbouring units read apart, with the gross and net acre table, 1:24,000.</figcaption>
                 </figure>
                 <figure>
-                  <a href="projects/plumas-lidar-harvest-planning/yarding_class.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/yarding_class_thumb.jpg" width="319" height="340" alt="Yarding class from planning slope over the LiDAR hillshade, with demonstration unit outlines" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
+                  <a href="projects/plumas-lidar-harvest-planning/yarding_class.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/yarding_class_thumb.jpg" width="319" height="340" alt="Yarding class from planning slope over the LiDAR hillshade, with demonstration unit outlines numbered in circles" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
                   <figcaption>Planning slope classed at 35 and 50 percent over the LiDAR hillshade.</figcaption>
                 </figure>
                 <figure>
@@ -131,6 +131,17 @@
                   <figcaption>Planning slope on the same ground: gentle benches pale, cable-yarding drainage walls red.</figcaption>
                 </figure>
               </div>
+              <h4>Cartography: what the first version got wrong</h4>
+              <p>The unit sheets went through a symbology review against a current Forest Service sale area map (Willamette National Forest, JC timber sale) and published cartographic guidance. Three defects and their fixes:</p>
+              <figure>
+                <a href="projects/plumas-lidar-harvest-planning/symbology_before_after.jpg" target="_blank" rel="noopener"><img src="projects/plumas-lidar-harvest-planning/symbology_before_after_thumb.jpg" width="740" height="293" alt="Side by side crops of the same six harvest units. On the left, adjacent tractor units share one fill and a dashed boundary of the same colour, so they read as a single block, and two-line labels sit outside the narrow units. On the right, each unit is outlined in white and a solid colour, numbered in a circle inside its own boundary, with the cable units hatched." loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
+                <figcaption>The same ground on the overview sheet, before and after the review.</figcaption>
+              </figure>
+              <ul>
+                <li><strong>Neighbouring units read as one block.</strong> Two units of the same yarding system shared a fill and a boundary of the same colour, so the line between them disappeared. Every unit boundary now carries a white casing under a solid line, which is how a sale area map keeps the cutting unit boundary the strongest line on the sheet.</li>
+                <li><strong>Labels left their units.</strong> A two-line <em>Unit 405 / Cable</em> block does not fit a narrow drainage unit, so it was placed over the neighbour. Units now carry the number alone in a circle, placed inside the unit, on a leader when it has to sit outside.</li>
+                <li><strong>Cable units read as water.</strong> They follow the drainages, and a flat blue fill next to a blue riparian wash is ambiguous. They are now hatched, so the yarding system survives a grey print and red-green colour blindness as well.</li>
+              </ul>
               <p><a href="projects/plumas-lidar-harvest-planning/map/" class="button-primary">Open the interactive map</a></p>
               <div class="project-tech">
                 <span class="tech-badge">Demonstration on public data</span>
@@ -143,7 +154,9 @@
                 <span class="tech-badge">Cruise QA</span>
               </div>
               <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning" class="gis-link" target="_blank" rel="noopener">Source &amp; previews on GitHub &rarr;<span class="visually-hidden"> (opens in new tab)</span></a>
-              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning/releases/tag/v1.1" class="gis-link" target="_blank" rel="noopener">Map series, GeoPDFs and rasters on the v1.1 release (100 to 190 MB each) &rarr;<span class="visually-hidden"> (opens in new tab)</span></a>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning/releases/download/v1.1/Sample_Sheets.pdf" class="gis-link">Sample: three sheets as print PDF, overview plus a tractor and a cable unit (27 MB) &darr;</a>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning/releases/download/v1.1/Sample_Unit_404_GeoPDF.pdf" class="gis-link">Sample: unit 404 as an Avenza GeoPDF, opens with field position (9 MB) &darr;</a>
+              <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning/releases/tag/v1.1" class="gis-link" target="_blank" rel="noopener">Full 25-sheet series, all GeoPDFs, figures and rasters on the v1.1 release (100 to 190 MB each) &rarr;<span class="visually-hidden"> (opens in new tab)</span></a>
             </div>
 
             <div class="gis-project-card">
@@ -154,6 +167,16 @@
                 <p><strong>Method.</strong> A Rust command-line and web tool. It runs BAF expansion, TPA, basal area, cubic and board-foot volume, QMD, diameter-class and species tables, Student's t sampling error and growth projections.</p>
                 <p><strong>Result.</strong> v0.2.0, September 2026, ships a Windows installer and macOS and Linux binaries, built after the test suite passes, with checksums. 392 tests in CI.</p>
                 <p><strong>Limits.</strong> Placeholder volume equations, not regional tables. No taper models. MIT license, 2026.</p>
+              </div>
+              <div class="featured-strip">
+                <figure>
+                  <a href="projects/forest-inventory-analyzer/analyzer_dashboard.jpg" target="_blank" rel="noopener"><img src="projects/forest-inventory-analyzer/analyzer_dashboard_thumb.jpg" width="740" height="423" alt="The analyzer's browser dashboard after a cruise file is loaded: five stand metric cards reading 28.0 trees per acre, 45.8 square feet of basal area, 2,069 cubic feet and 7,944 board feet per acre and a 17.3 inch quadratic mean diameter, above a species composition bar chart and a diameter distribution chart" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
+                  <figcaption>Stand metrics, species composition and the diameter distribution, compiled from the sample cruise that ships with the tool.</figcaption>
+                </figure>
+                <figure>
+                  <a href="projects/forest-inventory-analyzer/analyzer_statistics.jpg" target="_blank" rel="noopener"><img src="projects/forest-inventory-analyzer/analyzer_statistics_thumb.jpg" width="740" height="346" alt="Sampling statistics table showing mean, standard error, lower and upper confidence limits and sampling error for trees per acre, basal area and both volume measures, with the three errors above 20 percent marked in red, and the growth projection controls below it" loading="lazy"><span class="visually-hidden"> (opens in new tab)</span></a>
+                  <figcaption>Sampling error at 95 percent against Student's t. Five plots is a thin sample and the tool says so: volume error of 29 percent would fail the Region 5 stratum standard.</figcaption>
+                </figure>
               </div>
               <div class="project-tech">
                 <span class="tech-badge">Rust</span>
