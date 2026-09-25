@@ -63,7 +63,13 @@
     map.attributionControl.addAttribution('Analysis: William Steinley, <a href="https://github.com/woodsy-will/plumas-lidar-harvest-planning">plumas-lidar-harvest-planning</a> (CC BY 4.0)');
 
     const D = 'data/';
-    const fmt = (v, d = 0) => (v === '' || v === null || v === undefined || isNaN(v)) ? '-' : Number(v).toLocaleString('en-US', { maximumFractionDigits: d });
+    // Round half to even, as the printed sheets do (Python's format), so a 52.5 % slope reads 52 % here and on the sheet.
+    const fmt = (v, d = 0) => {
+      if (v === '' || v === null || v === undefined || isNaN(v)) return '-';
+      const s = Math.pow(10, d), x = Number(v) * s, f = Math.floor(x);
+      const r = Math.abs(x - f - 0.5) < 1e-9 ? (f % 2 === 0 ? f : f + 1) : Math.round(x);
+      return (r / s).toLocaleString('en-US', { maximumFractionDigits: d });
+    };
     const row = (k, v) => `<tr><td>${k}</td><td>${v}</td></tr>`;
     const methodColor = m => m === 'Cable' ? getComputedStyle(document.documentElement).getPropertyValue('--cable').trim() : getComputedStyle(document.documentElement).getPropertyValue('--tractor').trim();
 
