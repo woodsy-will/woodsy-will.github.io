@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://woodsy-will.github.io/sitemap.xml
+Sitemap: https://williamsteinley.github.io/sitemap.xml
